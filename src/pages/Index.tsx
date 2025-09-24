@@ -1,3 +1,5 @@
+"use client";
+
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -6,11 +8,6 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-4">
       <div className="text-center">
-        <img
-          src="/pasted-image-2025-09-24T21-04-51-929Z.png"
-          alt="Clear Wonders Skin Care"
-          className="w-full max-w-md mx-auto mb-8 rounded-lg shadow-lg"
-        />
         <h1 className="text-4xl font-bold mb-4">Welcome to Clear Wonders Skin Care</h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
           Where beauty begins with the skin
