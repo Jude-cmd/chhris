@@ -98,6 +98,7 @@ const CreamPage = () => {
     { src: "/IMG-20250924-WA0091.jpg", alt: "Clear Wonders Cream product 88" },
     { src: "/IMG-20250924-WA0092.jpg", alt: "Clear Wonders Cream product 89" },
     { src: "/IMG-20250924-WA0093.jpg", alt: "Clear Wonders Cream product 90" },
+    { src: "/IMG-20250924-WA0094.jpg", alt: "Clear Wonders Cream product 91" },
   ];
 
   return (
