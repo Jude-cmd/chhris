@@ -7,9 +7,17 @@ import { Link } from "react-router-dom";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import AboutFounderSidebar from "@/components/AboutFounderSidebar";
 import { Menu } from "lucide-react";
+import GalleryImageModal from "@/components/GalleryImageModal"; // Import the new modal component
+
+interface GalleryImage {
+  src: string;
+  alt: string;
+}
 
 const CreamPage: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null); // State for selected image
 
   const originalGalleryImages = [
     { src: "/IMG-20250924-WA0003.jpg", alt: "Clear Wonders Cream product 1" },
@@ -123,6 +131,11 @@ const CreamPage: React.FC = () => {
       alt: `Clear Wonders Cream product ${currentProductNumber++}`
     }));
 
+  const handleImageClick = (image: GalleryImage) => {
+    setSelectedImage(image);
+    setIsModalOpen(true);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 p-4 sm:p-8">
       <div className="max-w-4xl mx-auto">
@@ -152,9 +165,9 @@ const CreamPage: React.FC = () => {
         <section className="mb-12">
           <Card className="overflow-hidden shadow-lg border-rose-200">
             <img
-              src="/WhatsApp Image 2025-09-25 at 00.34.20_436040a4.jpg" // Updated to use the new image
+              src="/WhatsApp Image 2025-09-25 at 00.34.20_436040a4.jpg"
               alt="Delicious Cream"
-              className="w-full h-64 object-cover [object-position:top_20%]" // Adjusted object-position
+              className="w-full h-64 object-cover [object-position:top_20%]"
             />
             <CardHeader>
               <CardTitle className="text-3xl text-rose-700">Our Creamy Delights</CardTitle>
@@ -177,7 +190,7 @@ const CreamPage: React.FC = () => {
           <h2 className="text-4xl font-bold text-center text-rose-800 mb-8">Gallery of Clear Wonders Product</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {galleryImages.map((image, index) => (
-              <Card key={index} className="overflow-hidden shadow-md border-rose-100">
+              <Card key={index} className="overflow-hidden shadow-md border-rose-100 cursor-pointer" onClick={() => handleImageClick(image)}>
                 <img
                   src={image.src}
                   alt={image.alt}
@@ -194,6 +207,14 @@ const CreamPage: React.FC = () => {
       </div>
       <MadeWithDyad />
       <AboutFounderSidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+      {selectedImage && (
+        <GalleryImageModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          imageSrc={selectedImage.src}
+          imageAlt={selectedImage.alt}
+        />
+      )}
     </div>
   );
 };
