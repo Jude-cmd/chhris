@@ -14,8 +14,8 @@ const Index = () => {
           className="mx-auto mb-8 h-48 w-auto"
         />
         <h1 className="text-4xl font-bold mb-4">Welcome to Clear Wonders Skin Care</h1>
-        <p className="text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-8">
-          Where beauty begins with the skin
+        <p className="text-xl italic font-normal text-gray-700 dark:text-gray-300 mb-8">
+          "Where beauty begins with the skin"
         </p>
         <Link to="/cream">
           <Button className="px-6 py-3 text-lg bg-rose-600 hover:bg-rose-700 text-white">
