@@ -15,7 +15,7 @@ const CreamPage = () => {
             The Wonderful World of Clear Wonders Cream
           </h1>
           <p className="text-xl text-rose-600 font-light">
-            Indulge in the rich, smooth, and delightful essence of cream.
+            Indulge in the rich, smooth, and delightful essence of our products.
           </p>
           <Link to="/" className="mt-6 inline-block">
             <Button variant="outline" className="bg-white text-rose-700 border-rose-300 hover:bg-rose-50">
