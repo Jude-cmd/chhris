@@ -154,7 +154,7 @@ const CreamPage = () => {
             <img
               src="/WhatsApp Image 2025-09-25 at 00.34.20_436040a4.jpg"
               alt="Delicious Cream"
-              className="w-full h-64 object-cover object-top" {/* Changed object-center to object-top */}
+              className="w-full h-64 object-cover object-top"
             />
             <CardHeader>
               <CardTitle className="text-3xl text-rose-700">Our Creamy Delights</CardTitle>
