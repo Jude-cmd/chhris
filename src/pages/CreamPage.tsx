@@ -71,7 +71,7 @@ const CreamPage = () => {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-4xl font-bold text-center text-rose-800 mb-8">Gallery of Cream</h2>
+          <h2 className="text-4xl font-bold text-center text-rose-800 mb-8">Gallery of Clear Wonders Product</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {galleryImages.map((image, index) => (
               <Card key={index} className="overflow-hidden shadow-md border-rose-100">
