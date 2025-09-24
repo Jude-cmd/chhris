@@ -9,7 +9,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-4">
       <div className="text-center">
         <img
-          src="/clear-wonders-logo.png"
+          src="/placeholder.svg" // Changed to use the existing placeholder.svg
           alt="Clear Wonders Skin Care Logo"
           className="mx-auto mb-8 h-48 w-auto" // Added styling for size and centering
         />
