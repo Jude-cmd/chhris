@@ -17,20 +17,6 @@ const CreamPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 p-4 sm:p-8">
-      {/* Super Diagnostic Image - This should be impossible to miss if loaded */}
-      <img
-        src="/IMG-20250924-WA0005.jpg"
-        alt="Super Diagnostic Test Image"
-        style={{
-          width: '300px',
-          height: '300px',
-          border: '5px solid green',
-          display: 'block',
-          margin: '20px auto',
-          backgroundColor: 'yellow',
-          objectFit: 'cover',
-        }}
-      />
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-12">
           <h1 className="text-5xl font-extrabold text-rose-800 mb-4 tracking-tight">
@@ -49,7 +35,7 @@ const CreamPage = () => {
         <section className="mb-12">
           <Card className="overflow-hidden shadow-lg border-rose-200">
             <img
-              src="/IMG-20250924-WA0003.jpg" // Changed from placeholder.svg to one of your new images
+              src="/IMG-20250924-WA0003.jpg" // Using one of your images here
               alt="Delicious Cream"
               className="w-full h-64 object-cover object-center"
             />
