@@ -152,9 +152,9 @@ const CreamPage = () => {
         <section className="mb-12">
           <Card className="overflow-hidden shadow-lg border-rose-200">
             <img
-              src="/WhatsApp Image 2025-09-25 at 00.34.20_436040a4.jpg" // Updated to use the new image
+              src="/WhatsApp Image 2025-09-25 at 00.34.20_436040a4.jpg"
               alt="Delicious Cream"
-              className="w-full h-64 object-cover object-center"
+              className="w-full h-64 object-cover object-top" {/* Changed object-center to object-top */}
             />
             <CardHeader>
               <CardTitle className="text-3xl text-rose-700">Our Creamy Delights</CardTitle>
