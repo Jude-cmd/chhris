@@ -8,7 +8,7 @@ const Index = () => {
       <div className="text-center">
         <h1 className="text-4xl font-bold mb-4">Welcome to Clear Wonders</h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-          Start building your amazing project here!
+          Where beauty begins with the skin
         </p>
         <Link to="/cream">
           <Button className="px-6 py-3 text-lg bg-rose-600 hover:bg-rose-700 text-white">
