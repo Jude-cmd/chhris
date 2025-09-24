@@ -1,12 +1,16 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MadeWithDyad } from "@/components/made-with-dyad";
+import AboutFounderSidebar from "@/components/AboutFounderSidebar"; // Import the new sidebar component
+import { Menu } from "lucide-react"; // Import an icon for the sidebar button
 
 const CreamPage = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State to manage sidebar visibility
+
   const originalGalleryImages = [
     { src: "/IMG-20250924-WA0003.jpg", alt: "Clear Wonders Cream product 1" },
     { src: "/IMG-20250924-WA0005.jpg", alt: "Clear Wonders Cream product 2" },
@@ -122,7 +126,16 @@ const CreamPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 p-4 sm:p-8">
       <div className="max-w-4xl mx-auto">
-        <header className="text-center mb-12">
+        <header className="text-center mb-12 relative"> {/* Added relative for positioning */}
+          <Button
+            variant="outline"
+            size="icon"
+            className="absolute top-4 left-4 bg-white text-rose-700 border-rose-300 hover:bg-rose-50"
+            onClick={() => setIsSidebarOpen(true)}
+          >
+            <Menu className="h-5 w-5" />
+            <span className="sr-only">Open About Founder Sidebar</span>
+          </Button>
           <h1 className="text-5xl font-extrabold text-rose-800 mb-4 tracking-tight">
             The Wonderful World of Clear Wonders Cream
           </h1>
@@ -180,6 +193,7 @@ const CreamPage = () => {
         </section>
       </div>
       <MadeWithDyad />
+      <AboutFounderSidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
     </div>
   );
 };
