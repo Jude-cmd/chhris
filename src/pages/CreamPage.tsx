@@ -8,7 +8,7 @@ import { MadeWithDyad } from "@/components/made-with-dyad";
 import AboutFounderSidebar from "@/components/AboutFounderSidebar";
 import { Menu } from "lucide-react";
 
-const CreamPage = () => {
+const CreamPage: React.FC = () => { // Added React.FC here for explicit typing
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const originalGalleryImages = [
@@ -154,7 +154,7 @@ const CreamPage = () => {
             <img
               src="/WhatsApp Image 2025-09-25 at 00.34.20_436040a4.jpg"
               alt="Delicious Cream"
-              className="w-full h-64 object-cover [object-position:top_20%]" {/* Adjusted object-position */}
+              className="w-full h-64 object-cover [object-position:top_20%]"
             />
             <CardHeader>
               <CardTitle className="text-3xl text-rose-700">Our Creamy Delights</CardTitle>
