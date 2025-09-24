@@ -5,11 +5,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MadeWithDyad } from "@/components/made-with-dyad";
-import AboutFounderSidebar from "@/components/AboutFounderSidebar"; // Import the new sidebar component
-import { Menu } from "lucide-react"; // Import an icon for the sidebar button
+import AboutFounderSidebar from "@/components/AboutFounderSidebar";
+import { Menu } from "lucide-react";
 
 const CreamPage = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State to manage sidebar visibility
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const originalGalleryImages = [
     { src: "/IMG-20250924-WA0003.jpg", alt: "Clear Wonders Cream product 1" },
@@ -126,7 +126,7 @@ const CreamPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 p-4 sm:p-8">
       <div className="max-w-4xl mx-auto">
-        <header className="text-center mb-12 relative"> {/* Added relative for positioning */}
+        <header className="text-center mb-12 relative">
           <Button
             variant="outline"
             size="icon"
@@ -152,7 +152,7 @@ const CreamPage = () => {
         <section className="mb-12">
           <Card className="overflow-hidden shadow-lg border-rose-200">
             <img
-              src="/IMG-20250924-WA0003.jpg" // Using one of your images here
+              src="/WhatsApp Image 2025-09-25 at 00.34.20_436040a4.jpg" // Updated to use the new image
               alt="Delicious Cream"
               className="w-full h-64 object-cover object-center"
             />
