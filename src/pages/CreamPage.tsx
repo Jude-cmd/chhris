@@ -15,6 +15,9 @@ const CreamPage = () => {
     { src: "/IMG-20250924-WA0008.jpg", alt: "Clear Wonders Cream product 5" },
   ];
 
+  // Log the image paths to the console for debugging
+  console.log("Gallery Image Paths:", galleryImages.map(img => img.src));
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 p-4 sm:p-8">
       <div className="max-w-4xl mx-auto">
@@ -32,10 +35,21 @@ const CreamPage = () => {
           </Link>
         </header>
 
+        {/* Diagnostic: Direct image tag outside of any components */}
+        <div className="text-center mb-8">
+          <p className="text-lg font-bold text-red-600">--- Diagnostic Image Test ---</p>
+          <img
+            src="/IMG-20250924-WA0005.jpg"
+            alt="Diagnostic Test Image"
+            className="mx-auto w-64 h-64 object-cover border-4 border-blue-500"
+          />
+          <p className="text-lg font-bold text-red-600">--- End Diagnostic Image Test ---</p>
+        </div>
+
         <section className="mb-12">
           <Card className="overflow-hidden shadow-lg border-rose-200">
             <img
-              src="/placeholder.svg" // Placeholder image, you can replace this
+              src="/IMG-20250924-WA0003.jpg" // Changed from placeholder.svg to one of your new images
               alt="Delicious Cream"
               className="w-full h-64 object-cover object-center"
             />
