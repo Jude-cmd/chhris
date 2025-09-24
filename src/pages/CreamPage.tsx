@@ -15,11 +15,22 @@ const CreamPage = () => {
     { src: "/IMG-20250924-WA0008.jpg", alt: "Clear Wonders Cream product 5" },
   ];
 
-  // Log the image paths to the console for debugging
-  console.log("Gallery Image Paths:", galleryImages.map(img => img.src));
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 p-4 sm:p-8">
+      {/* Super Diagnostic Image - This should be impossible to miss if loaded */}
+      <img
+        src="/IMG-20250924-WA0005.jpg"
+        alt="Super Diagnostic Test Image"
+        style={{
+          width: '300px',
+          height: '300px',
+          border: '5px solid green',
+          display: 'block',
+          margin: '20px auto',
+          backgroundColor: 'yellow',
+          objectFit: 'cover',
+        }}
+      />
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-12">
           <h1 className="text-5xl font-extrabold text-rose-800 mb-4 tracking-tight">
@@ -34,17 +45,6 @@ const CreamPage = () => {
             </Button>
           </Link>
         </header>
-
-        {/* Diagnostic: Direct image tag outside of any components */}
-        <div className="text-center mb-8">
-          <p className="text-lg font-bold text-red-600">--- Diagnostic Image Test ---</p>
-          <img
-            src="/IMG-20250924-WA0005.jpg"
-            alt="Diagnostic Test Image"
-            className="mx-auto w-64 h-64 object-cover border-4 border-blue-500"
-          />
-          <p className="text-lg font-bold text-red-600">--- End Diagnostic Image Test ---</p>
-        </div>
 
         <section className="mb-12">
           <Card className="overflow-hidden shadow-lg border-rose-200">
