@@ -13,6 +13,11 @@ const CreamPage = () => {
     { src: "/IMG-20250924-WA0006.jpg", alt: "Clear Wonders Cream product 3" },
     { src: "/IMG-20250924-WA0007.jpg", alt: "Clear Wonders Cream product 4" },
     { src: "/IMG-20250924-WA0008.jpg", alt: "Clear Wonders Cream product 5" },
+    { src: "/IMG-20250924-WA0009.jpg", alt: "Clear Wonders Cream product 6" },
+    { src: "/IMG-20250924-WA0010.jpg", alt: "Clear Wonders Cream product 7" },
+    { src: "/IMG-20250924-WA0011.jpg", alt: "Clear Wonders Cream product 8" },
+    { src: "/IMG-20250924-WA0012.jpg", alt: "Clear Wonders Cream product 9" },
+    { src: "/IMG-20250924-WA0013.jpg", alt: "Clear Wonders Cream product 10" },
   ];
 
   return (
