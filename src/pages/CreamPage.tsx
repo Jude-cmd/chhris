@@ -7,6 +7,14 @@ import { Link } from "react-router-dom";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const CreamPage = () => {
+  const galleryImages = [
+    { src: "/IMG-20250924-WA0003.jpg", alt: "Clear Wonders Cream product 1" },
+    { src: "/IMG-20250924-WA0005.jpg", alt: "Clear Wonders Cream product 2" },
+    { src: "/IMG-20250924-WA0006.jpg", alt: "Clear Wonders Cream product 3" },
+    { src: "/IMG-20250924-WA0007.jpg", alt: "Clear Wonders Cream product 4" },
+    { src: "/IMG-20250924-WA0008.jpg", alt: "Clear Wonders Cream product 5" },
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 p-4 sm:p-8">
       <div className="max-w-4xl mx-auto">
@@ -51,16 +59,15 @@ const CreamPage = () => {
         <section className="mb-12">
           <h2 className="text-4xl font-bold text-center text-rose-800 mb-8">Gallery of Cream</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Placeholder for images - you can replace these with your actual image components */}
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <Card key={i} className="overflow-hidden shadow-md border-rose-100">
+            {galleryImages.map((image, index) => (
+              <Card key={index} className="overflow-hidden shadow-md border-rose-100">
                 <img
-                  src="/placeholder.svg" // Replace with your image paths
-                  alt={`Cream image ${i}`}
+                  src={image.src}
+                  alt={image.alt}
                   className="w-full h-48 object-cover object-center"
                 />
                 <CardContent className="p-4">
-                  <p className="text-md font-semibold text-rose-700">Cream Moment {i}</p>
+                  <p className="text-md font-semibold text-rose-700">{image.alt}</p>
                   <p className="text-sm text-gray-600">A delightful capture.</p>
                 </CardContent>
               </Card>
