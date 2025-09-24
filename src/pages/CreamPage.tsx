@@ -53,6 +53,21 @@ const CreamPage = () => {
     { src: "/IMG-20250924-WA0046.jpg", alt: "Clear Wonders Cream product 43" },
     { src: "/IMG-20250924-WA0047.jpg", alt: "Clear Wonders Cream product 44" },
     { src: "/IMG-20250924-WA0048.jpg", alt: "Clear Wonders Cream product 45" },
+    { src: "/IMG-20250924-WA0049.jpg", alt: "Clear Wonders Cream product 46" },
+    { src: "/IMG-20250924-WA0050.jpg", alt: "Clear Wonders Cream product 47" },
+    { src: "/IMG-20250924-WA0051.jpg", alt: "Clear Wonders Cream product 48" },
+    { src: "/IMG-20250924-WA0052.jpg", alt: "Clear Wonders Cream product 49" },
+    { src: "/IMG-20250924-WA0053.jpg", alt: "Clear Wonders Cream product 50" },
+    { src: "/IMG-20250924-WA0054.jpg", alt: "Clear Wonders Cream product 51" },
+    { src: "/IMG-20250924-WA0055.jpg", alt: "Clear Wonders Cream product 52" },
+    { src: "/IMG-20250924-WA0056.jpg", alt: "Clear Wonders Cream product 53" },
+    { src: "/IMG-20250924-WA0057.jpg", alt: "Clear Wonders Cream product 54" },
+    { src: "/IMG-20250924-WA0058.jpg", alt: "Clear Wonders Cream product 55" },
+    { src: "/IMG-20250924-WA0059.jpg", alt: "Clear Wonders Cream product 56" },
+    { src: "/IMG-20250924-WA0060.jpg", alt: "Clear Wonders Cream product 57" },
+    { src: "/IMG-20250924-WA0061.jpg", alt: "Clear Wonders Cream product 58" },
+    { src: "/IMG-20250924-WA0062.jpg", alt: "Clear Wonders Cream product 59" },
+    { src: "/IMG-20250924-WA0063.jpg", alt: "Clear Wonders Cream product 60" },
   ];
 
   return (
