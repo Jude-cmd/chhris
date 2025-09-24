@@ -12,7 +12,7 @@ const CreamPage = () => {
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-12">
           <h1 className="text-5xl font-extrabold text-rose-800 mb-4 tracking-tight">
-            The Wonderful World of Cream
+            The Wonderful World of Clear Wonders Cream
           </h1>
           <p className="text-xl text-rose-600 font-light">
             Indulge in the rich, smooth, and delightful essence of cream.
