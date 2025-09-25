@@ -10,7 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { products } from "@/data/products";
-import { Link } from "react-router-dom";
+// Removed Link import as it's no longer needed for navigation
 
 const FeaturedProductsCarousel: React.FC = () => {
   // We'll display a subset of products for the carousel, e.g., the first 6
@@ -32,20 +32,19 @@ const FeaturedProductsCarousel: React.FC = () => {
           {featuredProducts.map((product) => (
             <CarouselItem key={product.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
               <div className="p-1">
-                <Link to={`/products/${product.id}`}>
-                  <Card className="overflow-hidden shadow-lg border cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-xl group">
-                    <CardContent className="flex aspect-square items-center justify-center p-0">
-                      <img
-                        src={product.src}
-                        alt={product.alt}
-                        className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
-                      />
-                    </CardContent>
-                    <div className="p-4 text-center">
-                      <p className="text-lg font-semibold text-foreground">{product.name}</p>
-                    </div>
-                  </Card>
-                </Link>
+                {/* Removed Link component to make images non-clickable for details */}
+                <Card className="overflow-hidden shadow-lg border transition-all duration-300 hover:scale-105 hover:shadow-xl group">
+                  <CardContent className="flex aspect-square items-center justify-center p-0">
+                    <img
+                      src={product.src}
+                      alt={product.alt}
+                      className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </CardContent>
+                  <div className="p-4 text-center">
+                    <p className="text-lg font-semibold text-foreground">{product.name}</p>
+                  </div>
+                </Card>
               </div>
             </CarouselItem>
           ))}
