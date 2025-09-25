@@ -37,7 +37,7 @@ const ContactUsSidebar: React.FC<ContactUsSidebarProps> = ({ isOpen, onClose }) 
             <p>Address: 123 Beauty Lane, Skincare City, BW 54321</p>
           </div>
           <p className="mt-8 text-center text-md text-gray-600">
-            Our customer service team is available Monday to Friday, 9 AM - 5 PM.
+            Our customer service team is available Monday to Saturday, 9 AM - 6 PM.
           </p>
         </div>
       </SheetContent>
