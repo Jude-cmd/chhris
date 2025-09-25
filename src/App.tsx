@@ -11,6 +11,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
 import AboutFounderSidebar from "@/components/AboutFounderSidebar";
 import ContactUsSidebar from "@/components/ContactUsSidebar";
+import Footer from "@/components/Footer"; // Import the new Footer component
 import React, { useState } from "react";
 
 const queryClient = new QueryClient();
@@ -29,30 +30,35 @@ const App = () => {
           <Toaster />
           <Sonner />
           <BrowserRouter>
-            <Navbar
-              onOpenAbout={handleOpenAbout}
-              onOpenContact={handleOpenContact}
-            />
-            <AboutFounderSidebar isOpen={isAboutSidebarOpen} onClose={() => setIsAboutSidebarOpen(false)} />
-            <ContactUsSidebar isOpen={isContactSidebarOpen} onClose={() => setIsContactSidebarOpen(false)} />
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route
-                path="/cream"
-                element={
-                  <CreamPage
-                    onOpenAbout={handleOpenAbout}
-                    onOpenContact={handleOpenContact}
+            <div className="flex flex-col min-h-screen"> {/* Added flex container for sticky footer */}
+              <Navbar
+                onOpenAbout={handleOpenAbout}
+                onOpenContact={handleOpenContact}
+              />
+              <AboutFounderSidebar isOpen={isAboutSidebarOpen} onClose={() => setIsAboutSidebarOpen(false)} />
+              <ContactUsSidebar isOpen={isContactSidebarOpen} onClose={() => setIsContactSidebarOpen(false)} />
+              <main className="flex-grow"> {/* Main content grows to push footer down */}
+                <Routes>
+                  <Route path="/" element={<Index />} />
+                  <Route
+                    path="/cream"
+                    element={
+                      <CreamPage
+                        onOpenAbout={handleOpenAbout}
+                        onOpenContact={handleOpenContact}
+                      />
+                    }
                   />
-                }
-              />
-              <Route
-                path="/products/:productId"
-                element={<ProductDetailPage onOpenContact={handleOpenContact} />}
-              />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+                  <Route
+                    path="/products/:productId"
+                    element={<ProductDetailPage onOpenContact={handleOpenContact} />}
+                  />
+                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </main>
+              <Footer /> {/* Add the Footer component here */}
+            </div>
           </BrowserRouter>
         </TooltipProvider>
       </ThemeProvider>
