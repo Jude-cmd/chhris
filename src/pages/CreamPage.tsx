@@ -115,7 +115,7 @@ const CreamPage: React.FC<CreamPageProps> = ({ onOpenAbout, onOpenContact }) => 
                   />
                   <CardContent className="p-4">
                     <p className="text-md font-semibold text-foreground">{product.name}</p> {/* Display product name */}
-                    <p className="text-sm text-muted-foreground">{product.price}</p> {/* Display product price */}
+                    {/* Removed price display */}
                   </CardContent>
                 </Card>
               </Link>

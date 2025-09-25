@@ -61,7 +61,7 @@ const ProductDetailPage: React.FC = () => {
             />
             <CardHeader>
               <CardTitle className="text-3xl text-foreground">{product.name}</CardTitle>
-              <p className="text-2xl font-semibold text-primary mt-2">{product.price}</p>
+              {/* Removed price display */}
             </CardHeader>
             <CardContent>
               <p className="text-lg leading-relaxed text-foreground mb-6">
