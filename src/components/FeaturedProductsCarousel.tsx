@@ -18,9 +18,12 @@ const FeaturedProductsCarousel: React.FC = () => {
 
   return (
     <section className="w-full max-w-4xl mx-auto my-12 z-10">
-      <h2 className="text-4xl font-bold text-center text-foreground mb-8">
-        Our Featured Wonders
+      <h2 className="text-4xl font-bold text-center text-foreground mb-4">
+        Our Featured Products
       </h2>
+      <p className="text-lg text-center text-muted-foreground mb-8">
+        Click the "Click Here" button to access all the products.
+      </p>
       <Carousel
         opts={{
           align: "start",
