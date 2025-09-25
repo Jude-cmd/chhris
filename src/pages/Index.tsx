@@ -5,14 +5,12 @@ import { Link } from "react-router-dom";
 import MovingFlowers from "@/components/MovingFlowers";
 import { ArrowRight } from "lucide-react";
 import NewsletterSignup from "@/components/NewsletterSignup";
-import { ThemeToggle } from "@/components/ThemeToggle";
+// Removed ThemeToggle import as it's now in Navbar
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden">
-      <div className="absolute top-20 right-4 z-20"> {/* Moved down further from top-12 to top-20 */}
-        <ThemeToggle />
-      </div>
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden pt-14"> {/* Added pt-14 for Navbar clearance */}
+      {/* Removed ThemeToggle from here */}
       <MovingFlowers />
       <div className="text-center z-10">
         <img

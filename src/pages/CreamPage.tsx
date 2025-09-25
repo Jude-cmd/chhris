@@ -4,15 +4,14 @@ import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import AboutFounderSidebar from "@/components/AboutFounderSidebar";
-import ContactUsSidebar from "@/components/ContactUsSidebar";
-import { Menu, MessageSquareText } from "lucide-react";
+// Removed AboutFounderSidebar and ContactUsSidebar imports as they are now in App.tsx
+import { Menu, MessageSquareText } from "lucide-react"; // Keep Menu and MessageSquareText if used for other purposes, but remove if only for sidebar toggles
 import GalleryImageModal from "@/components/GalleryImageModal";
 import FAQSection from "@/components/FAQSection";
 import MovingFlowers from "@/components/MovingFlowers";
 import ScrollParallaxElements from "@/components/ScrollParallaxElements";
-import SidebarActionButton from "@/components/SidebarActionButton";
-import { ThemeToggle } from "@/components/ThemeToggle";
+// Removed SidebarActionButton import as it's no longer needed here
+// Removed ThemeToggle import as it's now in Navbar
 
 interface GalleryImage {
   src: string;
@@ -20,8 +19,7 @@ interface GalleryImage {
 }
 
 const CreamPage: React.FC = () => {
-  const [isAboutSidebarOpen, setIsAboutSidebarOpen] = useState(false);
-  const [isContactSidebarOpen, setIsContactSidebarOpen] = useState(false);
+  // Removed isAboutSidebarOpen and isContactSidebarOpen states as they are now managed in App.tsx
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
 
@@ -143,77 +141,43 @@ const CreamPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen p-4 sm:p-8 relative overflow-hidden">
+    <div className="min-h-screen p-4 sm:p-8 relative overflow-hidden pt-14"> {/* Added pt-14 for Navbar clearance */}
       <MovingFlowers />
       <ScrollParallaxElements />
       <div className="max-w-4xl mx-auto z-10 relative">
         <header className="text-center mb-12 relative">
-          {/* Existing sidebar toggle buttons */}
-          <div className="absolute top-4 left-4 flex flex-col space-y-2">
-            <Button
-              variant="outline"
-              size="icon"
-              className="bg-white text-rose-700 border-rose-300 hover:bg-rose-50"
-              onClick={() => setIsAboutSidebarOpen(true)}
-            >
-              <Menu className="h-5 w-5" />
-              <span className="sr-only">Open About Founder Sidebar</span>
-            </Button>
-          </div>
-          <div className="absolute top-4 right-4 flex flex-col space-y-2">
-            <Button
-              variant="outline"
-              size="icon"
-              className="bg-white text-rose-700 border-rose-300 hover:bg-rose-50"
-              onClick={() => setIsContactSidebarOpen(true)}
-            >
-              <MessageSquareText className="h-5 w-5" />
-              <span className="sr-only">Open Contact Us Sidebar</span>
-            </Button>
-          </div>
-
-          {/* New external Sidebar Action Buttons */}
-          <div className="absolute top-24 left-4 z-20 hidden md:block"> {/* Positioned below the icon */}
-            <SidebarActionButton label="About Us" onClick={() => setIsAboutSidebarOpen(true)} className="w-auto px-4 py-2 text-sm" />
-          </div>
-          <div className="absolute top-24 right-4 z-20 hidden md:block flex flex-col items-end"> {/* Positioned below the icon, added flex-col and items-end */}
-            <SidebarActionButton label="Contact Us" onClick={() => setIsContactSidebarOpen(true)} className="w-auto px-4 py-2 text-sm" />
-            <div className="mt-2"> {/* Added ThemeToggle here with margin-top */}
-              <ThemeToggle />
-            </div>
-          </div>
-
-          <h1 className="text-5xl font-extrabold text-foreground mb-4 tracking-tight"> {/* Changed text-rose-800 to text-foreground */}
+          {/* Removed all sidebar toggle buttons and ThemeToggle as they are now in the Navbar */}
+          <h1 className="text-5xl font-extrabold text-foreground mb-4 tracking-tight">
             The Wonderful World of Clear Wonders Authentic and Beauty Products
           </h1>
-          <p className="text-xl text-muted-foreground font-light"> {/* Changed text-rose-600 to text-muted-foreground */}
+          <p className="text-xl text-muted-foreground font-light">
             Indulge in the rich, smooth, and delightful essence of our products.
           </p>
           <Link to="/" className="mt-6 inline-block">
-            <Button variant="outline"> {/* Removed explicit color classes, variant="outline" handles theme */}
+            <Button variant="outline">
               Back to Home
             </Button>
           </Link>
         </header>
 
         <section className="mb-12">
-          <Card className="overflow-hidden shadow-lg border"> {/* Changed border-rose-200 to border */}
+          <Card className="overflow-hidden shadow-lg border">
             <img
-              src="/WhatsApp Image 2025-09-25 at 00.34.20_436040a4.jpg" // Corrected image source
+              src="/WhatsApp Image 2025-09-25 at 00.34.20_436040a4.jpg"
               alt="Delicious Cream"
               className="w-full h-64 object-cover [object-position:top_20%]"
             />
             <CardHeader>
-              <CardTitle className="text-3xl text-foreground">Our Creamy Delights</CardTitle> {/* Changed text-rose-700 to text-foreground */}
-              <CardDescription className="text-muted-foreground"> {/* Changed text-rose-500 to text-muted-foreground */}
+              <CardTitle className="text-3xl text-foreground">Our Creamy Delights</CardTitle>
+              <CardDescription className="text-muted-foreground">
                 Discover the versatility and luxury of cream in all its forms.
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="text-lg leading-relaxed text-foreground"> {/* Changed text-gray-700 to text-foreground */}
+              <p className="text-lg leading-relaxed text-foreground">
                 Cream, a dairy product composed of the higher-fat layer skimmed from the top of milk before homogenization, is a staple in kitchens worldwide. From enriching savory dishes to perfecting sweet desserts, its velvety texture and rich flavor are simply unparalleled. We celebrate the simple elegance and profound impact of cream in culinary arts.
               </p>
-              <p className="mt-4 text-lg leading-relaxed text-foreground"> {/* Changed text-gray-700 to text-foreground */}
+              <p className="mt-4 text-lg leading-relaxed text-foreground">
                 Whether it's whipped into a cloud-like topping, churned into butter, or simmered into a decadent sauce, cream adds a touch of magic to every recipe. We invite you to explore the beauty and deliciousness of cream through our curated collection of images.
               </p>
             </CardContent>
@@ -221,7 +185,7 @@ const CreamPage: React.FC = () => {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-8">Gallery of Clear Wonders Product</h2> {/* Changed text-rose-800 to text-foreground */}
+          <h2 className="text-4xl font-bold text-center text-foreground mb-8">Gallery of Clear Wonders Product</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {galleryImages.map((image, index) => (
               <Card
@@ -235,13 +199,13 @@ const CreamPage: React.FC = () => {
                   className="w-full h-48 object-cover object-center transition-transform duration-300 group-hover:scale-105"
                 />
                 <CardContent className="p-4">
-                  <p className="text-md font-semibold text-foreground">{image.alt}</p> {/* Changed text-rose-700 to text-foreground */}
-                  <p className="text-sm text-muted-foreground">A delightful capture.</p> {/* Changed text-gray-600 to text-muted-foreground */}
+                  <p className="text-md font-semibold text-foreground">{image.alt}</p>
+                  <p className="text-sm text-muted-foreground">A delightful capture.</p>
                 </CardContent>
               </Card>
             ))}
             <div className="col-span-full flex items-center justify-center p-8">
-              <p className="text-2xl font-bold text-foreground italic">... and so much more!</p> {/* Changed text-rose-800 to text-foreground */}
+              <p className="text-2xl font-bold text-foreground italic">... and so much more!</p>
             </div>
           </div>
         </section>
@@ -249,8 +213,7 @@ const CreamPage: React.FC = () => {
         <FAQSection />
 
       </div>
-      <AboutFounderSidebar isOpen={isAboutSidebarOpen} onClose={() => setIsAboutSidebarOpen(false)} />
-      <ContactUsSidebar isOpen={isContactSidebarOpen} onClose={() => setIsContactSidebarOpen(false)} />
+      {/* Removed AboutFounderSidebar and ContactUsSidebar as they are now rendered in App.tsx */}
       {selectedImage && (
         <GalleryImageModal
           isOpen={isModalOpen}
