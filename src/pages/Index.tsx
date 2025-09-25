@@ -18,11 +18,18 @@ const Index = () => {
         <p className="text-xl italic font-normal text-gray-700 dark:text-gray-300 mb-8">
           "Where beauty begins with the skin"
         </p>
-        <Link to="/cream">
-          <Button className="px-6 py-3 text-lg bg-rose-600 hover:bg-rose-700 text-white">
-            Explore the World of Astonishing products
-          </Button>
-        </Link>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4"> {/* Flex container for buttons */}
+          <Link to="/cream">
+            <Button className="px-6 py-3 text-lg bg-rose-600 hover:bg-rose-700 text-white">
+              Explore the World of Astonishing products
+            </Button>
+          </Link>
+          <Link to="/cream"> {/* New button linking to the same page for now */}
+            <Button className="px-6 py-3 text-lg bg-rose-500 hover:bg-rose-600 text-white animate-float"> {/* Added animate-float */}
+              Click Here
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
   );
