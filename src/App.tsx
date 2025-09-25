@@ -46,7 +46,10 @@ const App = () => {
                   />
                 }
               />
-              <Route path="/products/:productId" element={<ProductDetailPage />} /> {/* New Product Detail Route */}
+              <Route 
+                path="/products/:productId" 
+                element={<ProductDetailPage onOpenContact={handleOpenContact} />} {/* Pass onOpenContact */}
+              />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

@@ -9,7 +9,11 @@ import MovingFlowers from "@/components/MovingFlowers";
 import ScrollParallaxElements from "@/components/ScrollParallaxElements";
 import { ArrowLeft } from "lucide-react";
 
-const ProductDetailPage: React.FC = () => {
+interface ProductDetailPageProps {
+  onOpenContact: () => void;
+}
+
+const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenContact }) => {
   const { productId } = useParams<{ productId: string }>();
   const product = products.find(p => p.id === productId);
 
@@ -70,7 +74,10 @@ const ProductDetailPage: React.FC = () => {
               <p className="text-lg leading-relaxed text-foreground mb-6">
                 Like this product? Go to "About Us" or "Contact Us" in the navigation to see how you can reach us!
               </p>
-              <Button className="bg-rose-600 hover:bg-rose-700 text-white text-lg px-6 py-3">
+              <Button 
+                className="bg-rose-600 hover:bg-rose-700 text-white text-lg px-6 py-3"
+                onClick={onOpenContact} // Call onOpenContact when button is clicked
+              >
                 Interested? Contact Us!
               </Button>
             </CardContent>
