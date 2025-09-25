@@ -67,8 +67,11 @@ const ProductDetailPage: React.FC = () => {
               <p className="text-lg leading-relaxed text-foreground mb-6">
                 {product.description}
               </p>
+              <p className="text-lg leading-relaxed text-foreground mb-6">
+                Like this product? Go to "About Us" or "Contact Us" in the navigation to see how you can reach us!
+              </p>
               <Button className="bg-rose-600 hover:bg-rose-700 text-white text-lg px-6 py-3">
-                Add to Cart (Coming Soon!)
+                Interested? Contact Us!
               </Button>
             </CardContent>
           </Card>
