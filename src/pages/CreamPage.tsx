@@ -123,6 +123,8 @@ const CreamPage: React.FC = () => {
     "/IMG-20250924-WA0064.jpg", // product 61
     "/IMG-20250924-WA0085.jpg", // product 82 (was 85)
     "/IMG-20250924-WA0083.jpg", // product 80 (was 83)
+    "/IMG-20250924-WA0079.jpg", // product 76
+    "/IMG-20250924-WA0081.jpg", // product 78
   ];
 
   let currentProductNumber = 1;
