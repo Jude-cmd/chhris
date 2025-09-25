@@ -2,11 +2,13 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import MovingFlowers from "@/components/MovingFlowers"; // Import the new component
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-4">
-      <div className="text-center">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-4 relative overflow-hidden">
+      <MovingFlowers /> {/* Add the moving flowers component */}
+      <div className="text-center z-10"> {/* Ensure content is above flowers */}
         <img
           src="/clear-wonders-logo.png"
           alt="Clear Wonders Skin Care Logo"
