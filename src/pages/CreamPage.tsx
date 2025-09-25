@@ -130,7 +130,7 @@ const CreamPage: React.FC = () => {
     .filter(image => !imagesToRemove.includes(image.src))
     .map(image => ({
       ...image,
-      alt: `Clear Wonders product No ${currentProductNumber++}` // Changed this line
+      alt: `Clear Wonders product No ${currentProductNumber++}`
     }));
 
   const handleImageClick = (image: GalleryImage) => {
@@ -163,7 +163,7 @@ const CreamPage: React.FC = () => {
             </Button>
           </div>
           <h1 className="text-5xl font-extrabold text-rose-800 mb-4 tracking-tight">
-            The Wonderful World of Clear Wonders Cream
+            The Wonderful World of Clear Wonders Authentic and Beauty Products
           </h1>
           <p className="text-xl text-rose-600 font-light">
             Indulge in the rich, smooth, and delightful essence of our products.
