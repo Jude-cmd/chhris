@@ -1,3 +1,5 @@
+"use client";
+
 export const MadeWithDyad = () => {
   return (
     <div className="p-4 text-center">
@@ -5,7 +7,7 @@ export const MadeWithDyad = () => {
         href="https://www.dyad.sh/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-sm text-white hover:text-gray-700 dark:text-white dark:hover:text-gray-200"
+        className="text-xs text-gray-400 hover:text-gray-500 dark:text-gray-600 dark:hover:text-gray-500 transition-colors"
       >
         Made with Dyad
       </a>
