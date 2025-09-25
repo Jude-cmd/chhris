@@ -10,7 +10,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden">
-      <div className="absolute top-12 right-4 z-20"> {/* Moved down from top-4 to top-12 */}
+      <div className="absolute top-20 right-4 z-20"> {/* Moved down further from top-12 to top-20 */}
         <ThemeToggle />
       </div>
       <MovingFlowers />
