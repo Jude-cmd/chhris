@@ -10,7 +10,7 @@ import FeaturedProductsCarousel from "@/components/FeaturedProductsCarousel"; //
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center p-4 relative overflow-hidden pt-14"> {/* Removed justify-center */}
+    <div className="min-h-screen flex flex-col items-center p-4 relative overflow-hidden pt-14">
       {/* Removed ThemeToggle from here */}
       <MovingFlowers />
       <div className="text-center z-10">
@@ -37,9 +37,9 @@ const Index = () => {
           </Link>
         </div>
         <NewsletterSignup />
-        <p className="text-xs text-gray-600 dark:text-gray-400 font-medium mt-8">Created by Jude</p> {/* Changed mt-28 to mt-8 */}
       </div>
       <FeaturedProductsCarousel /> {/* Add the FeaturedProductsCarousel here */}
+      <p className="text-xs text-gray-600 dark:text-gray-400 font-medium mt-8">Created by Jude</p> {/* Moved here */}
     </div>
   );
 };
