@@ -143,7 +143,6 @@ const CreamPage: React.FC = () => {
   };
 
   return (
-    {/* Removed hardcoded background and text colors */}
     <div className="min-h-screen p-4 sm:p-8 relative overflow-hidden">
       <MovingFlowers />
       <ScrollParallaxElements />
@@ -227,7 +226,7 @@ const CreamPage: React.FC = () => {
             {galleryImages.map((image, index) => (
               <Card
                 key={index}
-                className="overflow-hidden shadow-md border cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg group" {/* Changed border-rose-100 to border */}
+                className="overflow-hidden shadow-md border cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg group"
                 onClick={() => handleImageClick(image)}
               >
                 <img
