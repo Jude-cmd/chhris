@@ -201,21 +201,21 @@ const CreamPage: React.FC<CreamPageProps> = ({ onOpenAbout, onOpenContact }) => 
           <Card className="overflow-hidden shadow-lg border">
             <img
               src="/WhatsApp Image 2025-09-25 at 00.34.20_436040a4.jpg"
-              alt="Delicious Cream"
+              alt="Clear Wonders Product Showcase"
               className="w-full h-64 object-cover [object-position:top_20%]"
             />
             <CardHeader>
-              <CardTitle className="text-3xl text-foreground">Our Creamy Delights</CardTitle>
+              <CardTitle className="text-3xl text-foreground">Your Trusted Source for Authentic Beauty</CardTitle>
               <CardDescription className="text-muted-foreground">
-                Discover the versatility and luxury of cream in all its forms.
+                Discover the Clear Wonders difference – quality, authenticity, and a touch of magic.
               </CardDescription>
             </CardHeader>
             <CardContent>
               <p className="text-lg leading-relaxed text-foreground">
-                Cream, a dairy product composed of the higher-fat layer skimmed from the top of milk before homogenization, is a staple in kitchens worldwide. From enriching savory dishes to perfecting sweet desserts, its velvety texture and rich flavor are simply unparalleled. We celebrate the simple elegance and profound impact of cream in culinary arts.
+                At Clear Wonders, we pride ourselves on being a trustworthy and authentic store dedicated to bringing you the finest beauty and skincare products. Our commitment to quality ensures that every item you find here is crafted with care and integrity, designed to enhance your natural radiance.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-foreground">
-                Whether it's whipped into a cloud-like topping, churned into butter, or simmered into a decadent sauce, cream adds a touch of magic to every recipe. We invite you to explore the beauty and deliciousness of cream through our curated collection of images.
+                We offer a diverse range of products, each carefully selected to meet your unique needs. Below, you'll find a glimpse into our extensive collection, showcasing the variety and excellence that define the Clear Wonders experience. Explore our gallery and find your next favorite beauty essential!
               </p>
             </CardContent>
           </Card>
