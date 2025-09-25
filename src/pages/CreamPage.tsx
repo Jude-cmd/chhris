@@ -170,18 +170,18 @@ const CreamPage: React.FC = () => {
               <MessageSquareText className="h-5 w-5" />
               <span className="sr-only">Open Contact Us Sidebar</span>
             </Button>
-            {/* Theme Toggle on CreamPage, positioned to the left of the contact button */}
-            <div className="absolute -left-12 top-0"> {/* Adjust position as needed */}
-              <ThemeToggle />
-            </div>
+            {/* Removed ThemeToggle from here */}
           </div>
 
           {/* New external Sidebar Action Buttons */}
           <div className="absolute top-24 left-4 z-20 hidden md:block"> {/* Positioned below the icon */}
             <SidebarActionButton label="About Us" onClick={() => setIsAboutSidebarOpen(true)} className="w-auto px-4 py-2 text-sm" />
           </div>
-          <div className="absolute top-24 right-4 z-20 hidden md:block"> {/* Positioned below the icon */}
+          <div className="absolute top-24 right-4 z-20 hidden md:block flex flex-col items-end"> {/* Positioned below the icon, added flex-col and items-end */}
             <SidebarActionButton label="Contact Us" onClick={() => setIsContactSidebarOpen(true)} className="w-auto px-4 py-2 text-sm" />
+            <div className="mt-2"> {/* Added ThemeToggle here with margin-top */}
+              <ThemeToggle />
+            </div>
           </div>
 
           <h1 className="text-5xl font-extrabold text-rose-800 mb-4 tracking-tight">
