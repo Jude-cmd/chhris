@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CreamPage from "./pages/CreamPage";
+import ProductDetailPage from "./pages/ProductDetailPage"; // Import ProductDetailPage
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
 import AboutFounderSidebar from "@/components/AboutFounderSidebar";
@@ -36,15 +37,16 @@ const App = () => {
             <ContactUsSidebar isOpen={isContactSidebarOpen} onClose={() => setIsContactSidebarOpen(false)} />
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route 
-                path="/cream" 
+              <Route
+                path="/cream"
                 element={
-                  <CreamPage 
-                    onOpenAbout={handleOpenAbout} 
-                    onOpenContact={handleOpenContact} 
+                  <CreamPage
+                    onOpenAbout={handleOpenAbout}
+                    onOpenContact={handleOpenContact}
                   />
-                } 
+                }
               />
+              <Route path="/products/:productId" element={<ProductDetailPage />} /> {/* New Product Detail Route */}
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
