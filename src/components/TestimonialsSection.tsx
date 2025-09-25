@@ -17,17 +17,17 @@ const testimonials: Testimonial[] = [
     rating: 5,
   },
   {
-    name: "Aisha M.",
+    name: "Blessing O.", // Changed from Aisha M.
     quote: "I was skeptical at first, but after using Clear Wonders cream for a few weeks, my skin feels incredibly soft and looks so much brighter. Highly recommend!",
     rating: 5,
   },
   {
-    name: "Hauwa S.",
+    name: "Grace E.", // Changed from Hauwa S.
     quote: "The customer service is as wonderful as the products! I had a question about my order and received a prompt, helpful response. A truly caring brand.",
     rating: 4,
   },
   {
-    name: "Zainab B.",
+    name: "Chiamaka N.", // Changed from Zainab B.
     quote: "Finally, a skincare line that understands what my sensitive skin needs. No irritation, just pure nourishment and a healthy glow. Thank you, Clear Wonders!",
     rating: 5,
   },
