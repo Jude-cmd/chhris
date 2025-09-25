@@ -10,7 +10,7 @@ import { Menu, MessageSquareText } from "lucide-react";
 import GalleryImageModal from "@/components/GalleryImageModal";
 import FAQSection from "@/components/FAQSection";
 import MovingFlowers from "@/components/MovingFlowers";
-// import MovingDragon from "@/components/MovingDragon"; // Removed the MovingDragon import
+import ScrollParallaxElements from "@/components/ScrollParallaxElements"; // Import the new component
 
 interface GalleryImage {
   src: string;
@@ -143,7 +143,7 @@ const CreamPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 p-4 sm:p-8 relative overflow-hidden">
       <MovingFlowers />
-      {/* <MovingDragon /> Removed the moving dragon here */}
+      <ScrollParallaxElements /> {/* Add the new scroll parallax elements here */}
       <div className="max-w-4xl mx-auto z-10 relative">
         <header className="text-center mb-12 relative">
           <div className="absolute top-4 left-4 flex flex-col space-y-2">
