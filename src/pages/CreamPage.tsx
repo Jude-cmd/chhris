@@ -4,10 +4,9 @@ import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { MadeWithDyad } from "@/components/made-with-dyad";
 import AboutFounderSidebar from "@/components/AboutFounderSidebar";
-import ContactUsSidebar from "@/components/ContactUsSidebar"; // Import the new ContactUsSidebar
-import { Menu, MessageSquareText } from "lucide-react"; // Import MessageSquareText icon
+import ContactUsSidebar from "@/components/ContactUsSidebar";
+import { Menu, MessageSquareText } from "lucide-react";
 import GalleryImageModal from "@/components/GalleryImageModal";
 
 interface GalleryImage {
@@ -16,8 +15,8 @@ interface GalleryImage {
 }
 
 const CreamPage: React.FC = () => {
-  const [isAboutSidebarOpen, setIsAboutSidebarOpen] = useState(false); // Renamed for clarity
-  const [isContactSidebarOpen, setIsContactSidebarOpen] = useState(false); // State for Contact Us sidebar
+  const [isAboutSidebarOpen, setIsAboutSidebarOpen] = useState(false);
+  const [isContactSidebarOpen, setIsContactSidebarOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
 
@@ -142,7 +141,7 @@ const CreamPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 p-4 sm:p-8">
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-12 relative">
-          <div className="absolute top-4 left-4 flex flex-col space-y-2"> {/* Group buttons */}
+          <div className="absolute top-4 left-4 flex flex-col space-y-2">
             <Button
               variant="outline"
               size="icon"
@@ -218,9 +217,8 @@ const CreamPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <MadeWithDyad />
       <AboutFounderSidebar isOpen={isAboutSidebarOpen} onClose={() => setIsAboutSidebarOpen(false)} />
-      <ContactUsSidebar isOpen={isContactSidebarOpen} onClose={() => setIsContactSidebarOpen(false)} /> {/* New Contact Us Sidebar */}
+      <ContactUsSidebar isOpen={isContactSidebarOpen} onClose={() => setIsContactSidebarOpen(false)} />
       {selectedImage && (
         <GalleryImageModal
           isOpen={isModalOpen}
