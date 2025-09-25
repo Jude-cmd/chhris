@@ -8,7 +8,8 @@ import AboutFounderSidebar from "@/components/AboutFounderSidebar";
 import ContactUsSidebar from "@/components/ContactUsSidebar";
 import { Menu, MessageSquareText } from "lucide-react";
 import GalleryImageModal from "@/components/GalleryImageModal";
-import FAQSection from "@/components/FAQSection"; // Import the new FAQSection
+import FAQSection from "@/components/FAQSection";
+import MovingFlowers from "@/components/MovingFlowers"; // Import the MovingFlowers component
 
 interface GalleryImage {
   src: string;
@@ -139,8 +140,9 @@ const CreamPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 p-4 sm:p-8">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 p-4 sm:p-8 relative overflow-hidden"> {/* Added relative and overflow-hidden */}
+      <MovingFlowers /> {/* Add the moving flowers component here */}
+      <div className="max-w-4xl mx-auto z-10 relative"> {/* Added z-10 and relative to ensure content is above flowers */}
         <header className="text-center mb-12 relative">
           <div className="absolute top-4 left-4 flex flex-col space-y-2">
             <Button
@@ -205,13 +207,13 @@ const CreamPage: React.FC = () => {
             {galleryImages.map((image, index) => (
               <Card
                 key={index}
-                className="overflow-hidden shadow-md border-rose-100 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg group" // Added hover effects
+                className="overflow-hidden shadow-md border-rose-100 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg group"
                 onClick={() => handleImageClick(image)}
               >
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-48 object-cover object-center transition-transform duration-300 group-hover:scale-105" // Added hover effect to image
+                  className="w-full h-48 object-cover object-center transition-transform duration-300 group-hover:scale-105"
                 />
                 <CardContent className="p-4">
                   <p className="text-md font-semibold text-rose-700">{image.alt}</p>
@@ -225,7 +227,7 @@ const CreamPage: React.FC = () => {
           </div>
         </section>
 
-        <FAQSection /> {/* Add the FAQ section here */}
+        <FAQSection />
 
       </div>
       <AboutFounderSidebar isOpen={isAboutSidebarOpen} onClose={() => setIsAboutSidebarOpen(false)} />
