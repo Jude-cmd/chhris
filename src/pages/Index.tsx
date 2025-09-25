@@ -13,6 +13,13 @@ const Index = () => {
           alt="Clear Wonders Skin Care Logo"
           className="mx-auto mb-8 h-48 w-auto"
         />
+        {/* TEMPORARY: Testing founder photo display */}
+        <img
+          src="/founder-photo.jpg"
+          alt="Founder's Photo Test"
+          className="mx-auto mb-8 h-32 w-32 object-cover rounded-full border-4 border-blue-500"
+        />
+        {/* END TEMPORARY */}
         <h1 className="text-4xl font-bold mb-4">Welcome to Clear Wonders Skin Care</h1>
         <p className="text-xl italic font-normal text-gray-700 dark:text-gray-300 mb-8">
           "Where beauty begins with the skin"
