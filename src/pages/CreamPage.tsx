@@ -11,7 +11,8 @@ import ScrollParallaxElements from "@/components/ScrollParallaxElements";
 import SidebarActionButton from "@/components/SidebarActionButton";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { products } from "@/data/products";
-import TestimonialsSection from "@/components/TestimonialsSection"; // Import the new TestimonialsSection
+import TestimonialsSection from "@/components/TestimonialsSection";
+import ReviewForm from "@/components/ReviewForm"; // Import the new ReviewForm
 
 interface CreamPageProps {
   onOpenAbout: () => void;
@@ -122,8 +123,8 @@ const CreamPage: React.FC<CreamPageProps> = ({ onOpenAbout, onOpenContact }) => 
           </div>
         </section>
 
-        <TestimonialsSection /> {/* Add the TestimonialsSection here */}
-
+        <TestimonialsSection />
+        <ReviewForm /> {/* Add the ReviewForm here */}
         <FAQSection />
 
       </div>
