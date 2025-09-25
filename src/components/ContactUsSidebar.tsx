@@ -22,11 +22,15 @@ const ContactUsSidebar: React.FC<ContactUsSidebarProps> = ({ isOpen, onClose }) 
         <div className="space-y-6 text-lg leading-relaxed text-gray-700">
           <div className="flex items-center space-x-3">
             <Mail className="h-6 w-6 text-rose-700" />
-            <p>Email: <a href="mailto:info@clearwonders.com" className="text-blue-600 hover:underline">info@clearwonders.com</a></p>
+            <p>Email: <a href="mailto:majzbusiness@gmail.com" className="text-blue-600 hover:underline">majzbusiness@gmail.com</a></p>
           </div>
           <div className="flex items-center space-x-3">
             <Phone className="h-6 w-6 text-rose-700" />
-            <p>Phone: <a href="tel:+1234567890" className="text-blue-600 hover:underline">+1 (234) 567-890</a></p>
+            <p>Phone 1: <a href="tel:+2348099993355" className="text-blue-600 hover:underline">08099993355</a></p>
+          </div>
+          <div className="flex items-center space-x-3">
+            <Phone className="h-6 w-6 text-rose-700" />
+            <p>Phone 2: <a href="tel:+2348033210309" className="text-blue-600 hover:underline">08033210309</a></p>
           </div>
           <div className="flex items-start space-x-3">
             <MapPin className="h-6 w-6 text-rose-700 flex-shrink-0 mt-1" />
