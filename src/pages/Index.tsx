@@ -32,7 +32,7 @@ const Index = () => {
             </Button>
           </Link>
         </div>
-        <p className="text-sm text-gray-600 dark:text-gray-400 font-medium mt-8">Created by Jude</p> {/* Changed text-lg to text-sm and added mt-8 */}
+        <p className="text-sm text-gray-600 dark:text-gray-400 font-medium mt-20">Created by Jude</p> {/* Increased mt-8 to mt-20 */}
       </div>
     </div>
   );
