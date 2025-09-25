@@ -9,7 +9,8 @@ import ContactUsSidebar from "@/components/ContactUsSidebar";
 import { Menu, MessageSquareText } from "lucide-react";
 import GalleryImageModal from "@/components/GalleryImageModal";
 import FAQSection from "@/components/FAQSection";
-import MovingFlowers from "@/components/MovingFlowers"; // Import the MovingFlowers component
+import MovingFlowers from "@/components/MovingFlowers";
+import MovingDragon from "@/components/MovingDragon"; // Import the new MovingDragon component
 
 interface GalleryImage {
   src: string;
@@ -140,9 +141,10 @@ const CreamPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 p-4 sm:p-8 relative overflow-hidden"> {/* Added relative and overflow-hidden */}
-      <MovingFlowers /> {/* Add the moving flowers component here */}
-      <div className="max-w-4xl mx-auto z-10 relative"> {/* Added z-10 and relative to ensure content is above flowers */}
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 p-4 sm:p-8 relative overflow-hidden">
+      <MovingFlowers />
+      <MovingDragon /> {/* Add the moving dragon here */}
+      <div className="max-w-4xl mx-auto z-10 relative">
         <header className="text-center mb-12 relative">
           <div className="absolute top-4 left-4 flex flex-col space-y-2">
             <Button
