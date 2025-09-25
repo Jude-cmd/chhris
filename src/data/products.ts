@@ -124,19 +124,19 @@ const descriptiveWords = [
   "Beloved", "Esteemed", "Valued", "Treasured", "Admired", "Revered", "Perfect", "Immaculate", "Happy"
 ];
 
-let currentProductNumber = 1;
 export const products: Product[] = originalGalleryImages
   .filter(image => !imagesToRemove.includes(image.src))
   .map((image, index) => {
+    const productNumber = index + 1; // Use index + 1 for unique numbering
     const uniqueWord = descriptiveWords[index % descriptiveWords.length]; // Cycle through words if more products than words
     const descriptionTemplate = `This ${uniqueWord} Clear Wonders product is designed to bring radiance and nourishment to your skin. It features a unique blend of natural ingredients, carefully selected to provide optimal care and a delightful experience. Discover the magic of Clear Wonders with this amazing item!`;
 
     return {
-      id: `product-${currentProductNumber}`, // Unique ID for routing
+      id: `product-${productNumber}`, // Unique ID for routing
       src: image.src,
-      alt: `Clear Wonders product No ${currentProductNumber}`,
-      name: `Clear Wonders Product ${currentProductNumber}`, // Placeholder name
+      alt: `Clear Wonders product No ${productNumber}`,
+      name: `Clear Wonders Product ${productNumber}`, // Now correctly numbered
       description: descriptionTemplate,
-      // price: `$${(25.00 + currentProductNumber * 0.5).toFixed(2)}`, // Removed price
+      // price: `$${(25.00 + productNumber * 0.5).toFixed(2)}`, // Removed price
     };
   });
