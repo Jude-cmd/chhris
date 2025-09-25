@@ -5,13 +5,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Menu, MessageSquareText } from "lucide-react";
-// Removed GalleryImageModal import as it's no longer directly used here
 import FAQSection from "@/components/FAQSection";
 import MovingFlowers from "@/components/MovingFlowers";
 import ScrollParallaxElements from "@/components/ScrollParallaxElements";
 import SidebarActionButton from "@/components/SidebarActionButton";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { products } from "@/data/products"; // Import the products data
+import { products } from "@/data/products";
+import TestimonialsSection from "@/components/TestimonialsSection"; // Import the new TestimonialsSection
 
 interface CreamPageProps {
   onOpenAbout: () => void;
@@ -19,9 +19,6 @@ interface CreamPageProps {
 }
 
 const CreamPage: React.FC<CreamPageProps> = ({ onOpenAbout, onOpenContact }) => {
-  // Removed isModalOpen and selectedImage states as modal is no longer directly opened from here
-  // Removed handleImageClick function as it's no longer needed
-
   return (
     <div className="min-h-screen p-4 sm:p-8 relative overflow-hidden pt-14">
       <MovingFlowers />
@@ -103,8 +100,8 @@ const CreamPage: React.FC<CreamPageProps> = ({ onOpenAbout, onOpenContact }) => 
         <section className="mb-12">
           <h2 className="text-4xl font-bold text-center text-foreground mb-8">Gallery of Clear Wonders Product</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map((product) => ( // Using the imported products array
-              <Link to={`/products/${product.id}`} key={product.id}> {/* Link to product detail page */}
+            {products.map((product) => (
+              <Link to={`/products/${product.id}`} key={product.id}>
                 <Card
                   className="overflow-hidden shadow-md border cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg group"
                 >
@@ -114,8 +111,7 @@ const CreamPage: React.FC<CreamPageProps> = ({ onOpenAbout, onOpenContact }) => 
                     className="w-full h-48 object-cover object-center transition-transform duration-300 group-hover:scale-105"
                   />
                   <CardContent className="p-4">
-                    <p className="text-md font-semibold text-foreground">{product.name}</p> {/* Display product name */}
-                    {/* Removed price display */}
+                    <p className="text-md font-semibold text-foreground">{product.name}</p>
                   </CardContent>
                 </Card>
               </Link>
@@ -126,10 +122,11 @@ const CreamPage: React.FC<CreamPageProps> = ({ onOpenAbout, onOpenContact }) => 
           </div>
         </section>
 
+        <TestimonialsSection /> {/* Add the TestimonialsSection here */}
+
         <FAQSection />
 
       </div>
-      {/* Removed GalleryImageModal as it's no longer triggered from here */}
     </div>
   );
 };
