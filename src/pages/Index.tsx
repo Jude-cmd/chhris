@@ -18,7 +18,7 @@ const Index = () => {
         </p>
         <Link to="/cream">
           <Button className="px-6 py-3 text-lg bg-rose-600 hover:bg-rose-700 text-white">
-            Explore the World of Cream
+            Explore the World of Astonishing products
           </Button>
         </Link>
       </div>
