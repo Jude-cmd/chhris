@@ -8,7 +8,7 @@ const MovingDragon: React.FC = () => {
   // The dragon should now appear and animate every time the CreamPage loads.
 
   return (
-    <div className="absolute top-1/2 left-0 -translate-y-1/2 z-50 w-24 h-24 flex items-center justify-center animate-dragon-fly"> {/* Increased size to w-24 h-24 */}
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-24 h-24 flex items-center justify-center animate-dragon-fly"> {/* Centered for debugging */}
       <Sparkles size={96} className="text-yellow-400 animate-pulse" /> {/* Increased size to 96 and changed color to bright yellow with pulse */}
     </div>
   );
