@@ -4,11 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import MovingFlowers from "@/components/MovingFlowers";
 import { ArrowRight } from "lucide-react";
-import NewsletterSignup from "@/components/NewsletterSignup"; // Import the new component
+import NewsletterSignup from "@/components/NewsletterSignup";
+import { ThemeToggle } from "@/components/ThemeToggle"; // Import the new component
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-4 relative overflow-hidden">
+      <div className="absolute top-4 right-4 z-20"> {/* Position the toggle button */}
+        <ThemeToggle />
+      </div>
       <MovingFlowers />
       <div className="text-center z-10">
         <img
@@ -33,7 +37,7 @@ const Index = () => {
             </Button>
           </Link>
         </div>
-        <NewsletterSignup /> {/* Add the newsletter signup component here */}
+        <NewsletterSignup />
         <p className="text-xs text-gray-600 dark:text-gray-400 font-medium mt-28">Created by Jude</p>
       </div>
     </div>
