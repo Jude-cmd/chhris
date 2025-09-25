@@ -12,7 +12,7 @@ interface AboutFounderSidebarProps {
 const AboutFounderSidebar: React.FC<AboutFounderSidebarProps> = ({ isOpen, onClose }) => {
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
-      <SheetContent side="left" className="w-full sm:max-w-md bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 p-6">
+      <SheetContent side="left" className="w-full sm:max-w-md bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 p-6 overflow-y-auto"> {/* Added overflow-y-auto */}
         <SheetHeader className="mb-6 text-center">
           <Avatar className="mx-auto h-24 w-24 mb-4 border-4 border-rose-300 shadow-md">
             <AvatarImage src="/placeholder.svg" alt="Aisha Musa's Avatar" />
