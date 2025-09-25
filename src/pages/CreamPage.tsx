@@ -6,8 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import AboutFounderSidebar from "@/components/AboutFounderSidebar";
-import { Menu } from "lucide-react";
-import GalleryImageModal from "@/components/GalleryImageModal"; // Import the new modal component
+import ContactUsSidebar from "@/components/ContactUsSidebar"; // Import the new ContactUsSidebar
+import { Menu, MessageSquareText } from "lucide-react"; // Import MessageSquareText icon
+import GalleryImageModal from "@/components/GalleryImageModal";
 
 interface GalleryImage {
   src: string;
@@ -15,9 +16,10 @@ interface GalleryImage {
 }
 
 const CreamPage: React.FC = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
-  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null); // State for selected image
+  const [isAboutSidebarOpen, setIsAboutSidebarOpen] = useState(false); // Renamed for clarity
+  const [isContactSidebarOpen, setIsContactSidebarOpen] = useState(false); // State for Contact Us sidebar
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
 
   const originalGalleryImages = [
     { src: "/IMG-20250924-WA0003.jpg", alt: "Clear Wonders Cream product 1" },
@@ -140,15 +142,26 @@ const CreamPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 p-4 sm:p-8">
       <div className="max-w-4xl mx-auto">
         <header className="text-center mb-12 relative">
-          <Button
-            variant="outline"
-            size="icon"
-            className="absolute top-4 left-4 bg-white text-rose-700 border-rose-300 hover:bg-rose-50"
-            onClick={() => setIsSidebarOpen(true)}
-          >
-            <Menu className="h-5 w-5" />
-            <span className="sr-only">Open About Founder Sidebar</span>
-          </Button>
+          <div className="absolute top-4 left-4 flex flex-col space-y-2"> {/* Group buttons */}
+            <Button
+              variant="outline"
+              size="icon"
+              className="bg-white text-rose-700 border-rose-300 hover:bg-rose-50"
+              onClick={() => setIsAboutSidebarOpen(true)}
+            >
+              <Menu className="h-5 w-5" />
+              <span className="sr-only">Open About Founder Sidebar</span>
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              className="bg-white text-rose-700 border-rose-300 hover:bg-rose-50"
+              onClick={() => setIsContactSidebarOpen(true)}
+            >
+              <MessageSquareText className="h-5 w-5" />
+              <span className="sr-only">Open Contact Us Sidebar</span>
+            </Button>
+          </div>
           <h1 className="text-5xl font-extrabold text-rose-800 mb-4 tracking-tight">
             The Wonderful World of Clear Wonders Cream
           </h1>
@@ -206,7 +219,8 @@ const CreamPage: React.FC = () => {
         </section>
       </div>
       <MadeWithDyad />
-      <AboutFounderSidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+      <AboutFounderSidebar isOpen={isAboutSidebarOpen} onClose={() => setIsAboutSidebarOpen(false)} />
+      <ContactUsSidebar isOpen={isContactSidebarOpen} onClose={() => setIsContactSidebarOpen(false)} /> {/* New Contact Us Sidebar */}
       {selectedImage && (
         <GalleryImageModal
           isOpen={isModalOpen}
