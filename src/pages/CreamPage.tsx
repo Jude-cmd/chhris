@@ -199,7 +199,7 @@ const CreamPage: React.FC = () => {
         <section className="mb-12">
           <Card className="overflow-hidden shadow-lg border"> {/* Changed border-rose-200 to border */}
             <img
-              src="/WhatsApp Image 20250924-WA0003.jpg"
+              src="/WhatsApp Image 2025-09-25 at 00.34.20_436040a4.jpg" // Corrected image source
               alt="Delicious Cream"
               className="w-full h-64 object-cover [object-position:top_20%]"
             />
