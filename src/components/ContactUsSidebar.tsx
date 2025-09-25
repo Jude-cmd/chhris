@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram } from "lucide-react"; // Import Instagram icon
 
 interface ContactUsSidebarProps {
   isOpen: boolean;
@@ -31,6 +31,11 @@ const ContactUsSidebar: React.FC<ContactUsSidebarProps> = ({ isOpen, onClose }) 
           <div className="flex items-center space-x-3">
             <Phone className="h-6 w-6 text-primary" />
             <p>Phone 2: <a href="tel:+2348033210309" className="text-blue-600 hover:underline">08033210309</a></p>
+          </div>
+          {/* New Instagram Link */}
+          <div className="flex items-center space-x-3">
+            <Instagram className="h-6 w-6 text-primary" />
+            <p>Instagram: <a href="https://www.instagram.com/aaishaswondersandcloset" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">@Aaisha’s wonders and closet</a></p>
           </div>
           <div className="flex items-start space-x-3">
             <MapPin className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
