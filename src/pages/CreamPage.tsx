@@ -214,6 +214,10 @@ const CreamPage: React.FC = () => {
                 </CardContent>
               </Card>
             ))}
+            {/* Adding "and so much more!" after the gallery */}
+            <div className="col-span-full flex items-center justify-center p-8">
+              <p className="text-2xl font-bold text-rose-800 italic">... and so much more!</p>
+            </div>
           </div>
         </section>
       </div>
