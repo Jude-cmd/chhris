@@ -39,7 +39,7 @@ const ContactUsSidebar: React.FC<ContactUsSidebarProps> = ({ isOpen, onClose }) 
           </div>
           <div className="flex items-start space-x-3">
             <MapPin className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-            <p>Address: 123 Beauty Lane, Skincare City, BW 54321</p>
+            <p>Address: Opposie Aliko filling station Unity estate, Jaba, Kano State.</p>
           </div>
           <p className="mt-8 text-center text-muted-foreground text-md">
             Our customer service team is available Monday to Saturday, 9 AM - 6 PM.
