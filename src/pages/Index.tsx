@@ -3,7 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import MovingFlowers from "@/components/MovingFlowers";
-import { ArrowRight } from "lucide-react"; // Import the ArrowRight icon
+import { ArrowRight } from "lucide-react";
+import NewsletterSignup from "@/components/NewsletterSignup"; // Import the new component
 
 const Index = () => {
   return (
@@ -32,7 +33,8 @@ const Index = () => {
             </Button>
           </Link>
         </div>
-        <p className="text-xs text-gray-600 dark:text-gray-400 font-medium mt-28">Created by Jude</p> {/* Increased mt-20 to mt-28 */}
+        <NewsletterSignup /> {/* Add the newsletter signup component here */}
+        <p className="text-xs text-gray-600 dark:text-gray-400 font-medium mt-28">Created by Jude</p>
       </div>
     </div>
   );

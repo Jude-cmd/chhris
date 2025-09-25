@@ -8,6 +8,7 @@ import AboutFounderSidebar from "@/components/AboutFounderSidebar";
 import ContactUsSidebar from "@/components/ContactUsSidebar";
 import { Menu, MessageSquareText } from "lucide-react";
 import GalleryImageModal from "@/components/GalleryImageModal";
+import FAQSection from "@/components/FAQSection"; // Import the new FAQSection
 
 interface GalleryImage {
   src: string;
@@ -202,11 +203,15 @@ const CreamPage: React.FC = () => {
           <h2 className="text-4xl font-bold text-center text-rose-800 mb-8">Gallery of Clear Wonders Product</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {galleryImages.map((image, index) => (
-              <Card key={index} className="overflow-hidden shadow-md border-rose-100 cursor-pointer" onClick={() => handleImageClick(image)}>
+              <Card
+                key={index}
+                className="overflow-hidden shadow-md border-rose-100 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg group" // Added hover effects
+                onClick={() => handleImageClick(image)}
+              >
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-48 object-cover object-center"
+                  className="w-full h-48 object-cover object-center transition-transform duration-300 group-hover:scale-105" // Added hover effect to image
                 />
                 <CardContent className="p-4">
                   <p className="text-md font-semibold text-rose-700">{image.alt}</p>
@@ -214,12 +219,14 @@ const CreamPage: React.FC = () => {
                 </CardContent>
               </Card>
             ))}
-            {/* Adding "and so much more!" after the gallery */}
             <div className="col-span-full flex items-center justify-center p-8">
               <p className="text-2xl font-bold text-rose-800 italic">... and so much more!</p>
             </div>
           </div>
         </section>
+
+        <FAQSection /> {/* Add the FAQ section here */}
+
       </div>
       <AboutFounderSidebar isOpen={isAboutSidebarOpen} onClose={() => setIsAboutSidebarOpen(false)} />
       <ContactUsSidebar isOpen={isContactSidebarOpen} onClose={() => setIsContactSidebarOpen(false)} />
