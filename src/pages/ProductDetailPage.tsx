@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react"; // Import useState
 import { useParams, Link } from "react-router-dom";
 import { products } from "@/data/products";
 import { Button } from "@/components/ui/button";
@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import MovingFlowers from "@/components/MovingFlowers";
 import ScrollParallaxElements from "@/components/ScrollParallaxElements";
 import { ArrowLeft } from "lucide-react";
+import GalleryImageModal from "@/components/GalleryImageModal"; // Import GalleryImageModal
 
 interface ProductDetailPageProps {
   onOpenContact: () => void;
@@ -16,6 +17,16 @@ interface ProductDetailPageProps {
 const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenContact }) => {
   const { productId } = useParams<{ productId: string }>();
   const product = products.find(p => p.id === productId);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImageSrc, setSelectedImageSrc] = useState("");
+  const [selectedImageAlt, setSelectedImageAlt] = useState("");
+
+  const handleImageClick = (src: string, alt: string) => {
+    setSelectedImageSrc(src);
+    setSelectedImageAlt(alt);
+    setIsModalOpen(true);
+  };
 
   if (!product) {
     return (
@@ -61,11 +72,11 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenContact }) 
             <img
               src={product.src}
               alt={product.alt}
-              className="w-full h-96 object-cover object-center"
+              className="w-full h-96 object-cover object-center cursor-pointer transition-transform duration-300 hover:scale-105"
+              onClick={() => handleImageClick(product.src, product.alt)} // Add onClick to open modal
             />
             <CardHeader>
               <CardTitle className="text-3xl text-foreground">{product.name}</CardTitle>
-              {/* Removed price display */}
             </CardHeader>
             <CardContent>
               <p className="text-lg leading-relaxed text-foreground mb-6">
@@ -76,7 +87,7 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenContact }) 
               </p>
               <Button 
                 className="bg-rose-600 hover:bg-rose-700 text-white text-lg px-6 py-3"
-                onClick={onOpenContact} // Call onOpenContact when button is clicked
+                onClick={onOpenContact}
               >
                 Interested? Contact Us!
               </Button>
@@ -84,6 +95,14 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenContact }) 
           </Card>
         </section>
       </div>
+
+      {/* Render the GalleryImageModal */}
+      <GalleryImageModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        imageSrc={selectedImageSrc}
+        imageAlt={selectedImageAlt}
+      />
     </div>
   );
 };
