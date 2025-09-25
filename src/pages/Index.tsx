@@ -19,7 +19,7 @@ const Index = () => {
         <p className="text-xl italic font-normal text-gray-700 dark:text-gray-300 mb-8">
           "Where beauty begins with the skin"
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"> {/* Added mb-8 for spacing */}
           <Link to="/cream">
             <Button className="px-6 py-3 text-lg bg-rose-500 hover:bg-rose-600 text-white animate-float">
               Click Here
@@ -32,6 +32,7 @@ const Index = () => {
             </Button>
           </Link>
         </div>
+        <p className="text-lg text-gray-600 dark:text-gray-400 font-medium">Created by Jude</p> {/* Added "Created by Jude" */}
       </div>
     </div>
   );
