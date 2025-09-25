@@ -15,26 +15,26 @@ const AboutFounderSidebar: React.FC<AboutFounderSidebarProps> = ({ isOpen, onClo
       <SheetContent side="left" className="w-full sm:max-w-md bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 p-6">
         <SheetHeader className="mb-6 text-center">
           <Avatar className="mx-auto h-24 w-24 mb-4 border-4 border-rose-300 shadow-md">
-            <AvatarImage src="/placeholder.svg" alt="Founder's Avatar" />
-            <AvatarFallback className="bg-rose-200 text-rose-800 text-xl font-semibold">CW</AvatarFallback>
+            <AvatarImage src="/placeholder.svg" alt="Aisha Musa's Avatar" />
+            <AvatarFallback className="bg-rose-200 text-rose-800 text-xl font-semibold">AM</AvatarFallback>
           </Avatar>
-          <SheetTitle className="text-3xl font-bold text-rose-800">About the Founder</SheetTitle>
+          <SheetTitle className="text-3xl font-bold text-rose-800">About Our Founder, Aisha Musa</SheetTitle>
           <SheetDescription className="text-rose-600 text-lg italic">
-            The Visionary Behind Clear Wonders
+            The Heart and Vision Behind Clear Wonders
           </SheetDescription>
         </SheetHeader>
         <div className="space-y-6 text-lg leading-relaxed text-gray-700">
           <p>
-            Welcome to Clear Wonders! My journey began with a deep passion for natural beauty and a commitment to creating skincare products that truly make a difference. I believe that everyone deserves to feel confident and radiant in their own skin.
+            Welcome to Clear Wonders! Our story is deeply rooted in the unwavering love and dedication of our founder, Aisha Musa. For years, Aisha poured her heart into caring for her beloved family, nurturing not just her own children, but every member of her extended family with boundless warmth and devotion.
           </p>
           <p>
-            Years of research, dedication, and a touch of magic went into formulating our signature Clear Wonders Cream. My goal was to harness the power of nature to deliver effective, gentle, and luxurious skincare solutions.
+            It was during these precious years, while tending to the needs of her loved ones, that Aisha discovered a profound passion for natural wellness and beauty. She realized that true care begins with the skin, and she dreamed of creating products that would bring comfort, confidence, and a touch of wonder to everyone.
           </p>
           <p>
-            It brings me immense joy to share these creations with you. Thank you for being a part of the Clear Wonders family. Here's to healthy, glowing skin!
+            With this vision, and inspired by the radiant smiles of her family, Aisha embarked on a journey of research and meticulous formulation. She harnessed the purest ingredients and her innate understanding of care to bring Clear Wonders to life. Each product is a testament to her nurturing spirit and her belief that everyone deserves to feel cherished and beautiful.
           </p>
           <p className="text-right font-semibold text-rose-700">
-            — With love, The Founder
+            — With love and care, Aisha Musa
           </p>
         </div>
       </SheetContent>
