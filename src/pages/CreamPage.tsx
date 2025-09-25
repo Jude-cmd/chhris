@@ -10,7 +10,8 @@ import { Menu, MessageSquareText } from "lucide-react";
 import GalleryImageModal from "@/components/GalleryImageModal";
 import FAQSection from "@/components/FAQSection";
 import MovingFlowers from "@/components/MovingFlowers";
-import ScrollParallaxElements from "@/components/ScrollParallaxElements"; // Import the new component
+import ScrollParallaxElements from "@/components/ScrollParallaxElements";
+import SidebarActionButton from "@/components/SidebarActionButton"; // Import the SidebarActionButton
 
 interface GalleryImage {
   src: string;
@@ -143,9 +144,10 @@ const CreamPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 p-4 sm:p-8 relative overflow-hidden">
       <MovingFlowers />
-      <ScrollParallaxElements /> {/* Add the new scroll parallax elements here */}
+      <ScrollParallaxElements />
       <div className="max-w-4xl mx-auto z-10 relative">
         <header className="text-center mb-12 relative">
+          {/* Existing sidebar toggle buttons */}
           <div className="absolute top-4 left-4 flex flex-col space-y-2">
             <Button
               variant="outline"
@@ -156,6 +158,8 @@ const CreamPage: React.FC = () => {
               <Menu className="h-5 w-5" />
               <span className="sr-only">Open About Founder Sidebar</span>
             </Button>
+          </div>
+          <div className="absolute top-4 right-4 flex flex-col space-y-2">
             <Button
               variant="outline"
               size="icon"
@@ -166,6 +170,15 @@ const CreamPage: React.FC = () => {
               <span className="sr-only">Open Contact Us Sidebar</span>
             </Button>
           </div>
+
+          {/* New external Sidebar Action Buttons */}
+          <div className="absolute top-24 left-4 z-20 hidden md:block"> {/* Positioned below the icon */}
+            <SidebarActionButton label="About Us" onClick={() => setIsAboutSidebarOpen(true)} className="w-auto px-4 py-2 text-sm" />
+          </div>
+          <div className="absolute top-24 right-4 z-20 hidden md:block"> {/* Positioned below the icon */}
+            <SidebarActionButton label="Contact Us" onClick={() => setIsContactSidebarOpen(true)} className="w-auto px-4 py-2 text-sm" />
+          </div>
+
           <h1 className="text-5xl font-extrabold text-rose-800 mb-4 tracking-tight">
             The Wonderful World of Clear Wonders Authentic and Beauty Products
           </h1>
