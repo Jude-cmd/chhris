@@ -30,9 +30,6 @@ const AboutFounderSidebar: React.FC<AboutFounderSidebarProps> = ({ isOpen, onClo
           <p>
             It was during these precious years, while tending to the needs of her loved ones, that Aisha discovered a profound passion for natural wellness and beauty. She realized that true care begins with the skin, and she dreamed of creating products that would bring comfort, confidence, and a touch of wonder to everyone.
           </p>
-          <p>
-            With this vision, and inspired by the radiant smiles of her family, Aisha embarked on a journey of research and meticulous formulation. She harnessed the purest ingredients and her innate understanding of care to bring Clear Wonders to life. Each product is a testament to her nurturing spirit and her belief that everyone deserves to feel cherished and beautiful.
-          </p>
           <p className="text-right font-semibold text-rose-700">
             — With love and care, Aisha Musa
           </p>
