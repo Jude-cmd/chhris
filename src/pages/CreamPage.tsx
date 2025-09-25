@@ -12,7 +12,7 @@ import FAQSection from "@/components/FAQSection";
 import MovingFlowers from "@/components/MovingFlowers";
 import ScrollParallaxElements from "@/components/ScrollParallaxElements";
 import SidebarActionButton from "@/components/SidebarActionButton";
-import { ThemeToggle } from "@/components/ThemeToggle"; // Import the ThemeToggle
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 interface GalleryImage {
   src: string;
@@ -143,7 +143,7 @@ const CreamPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-100 text-gray-800 p-4 sm:p-8 relative overflow-hidden">
+    <div className="min-h-screen p-4 sm:p-8 relative overflow-hidden"> {/* Removed hardcoded background and text colors */}
       <MovingFlowers />
       <ScrollParallaxElements />
       <div className="max-w-4xl mx-auto z-10 relative">
@@ -170,7 +170,6 @@ const CreamPage: React.FC = () => {
               <MessageSquareText className="h-5 w-5" />
               <span className="sr-only">Open Contact Us Sidebar</span>
             </Button>
-            {/* Removed ThemeToggle from here */}
           </div>
 
           {/* New external Sidebar Action Buttons */}
@@ -184,37 +183,37 @@ const CreamPage: React.FC = () => {
             </div>
           </div>
 
-          <h1 className="text-5xl font-extrabold text-rose-800 mb-4 tracking-tight">
+          <h1 className="text-5xl font-extrabold text-foreground mb-4 tracking-tight"> {/* Changed text-rose-800 to text-foreground */}
             The Wonderful World of Clear Wonders Authentic and Beauty Products
           </h1>
-          <p className="text-xl text-rose-600 font-light">
+          <p className="text-xl text-muted-foreground font-light"> {/* Changed text-rose-600 to text-muted-foreground */}
             Indulge in the rich, smooth, and delightful essence of our products.
           </p>
           <Link to="/" className="mt-6 inline-block">
-            <Button variant="outline" className="bg-white text-rose-700 border-rose-300 hover:bg-rose-50">
+            <Button variant="outline"> {/* Removed explicit color classes, variant="outline" handles theme */}
               Back to Home
             </Button>
           </Link>
         </header>
 
         <section className="mb-12">
-          <Card className="overflow-hidden shadow-lg border-rose-200">
+          <Card className="overflow-hidden shadow-lg border"> {/* Changed border-rose-200 to border */}
             <img
               src="/WhatsApp Image 2025-09-25 at 00.34.20_436040a4.jpg"
               alt="Delicious Cream"
               className="w-full h-64 object-cover [object-position:top_20%]"
             />
             <CardHeader>
-              <CardTitle className="text-3xl text-rose-700">Our Creamy Delights</CardTitle>
-              <CardDescription className="text-rose-500">
+              <CardTitle className="text-3xl text-foreground">Our Creamy Delights</CardTitle> {/* Changed text-rose-700 to text-foreground */}
+              <CardDescription className="text-muted-foreground"> {/* Changed text-rose-500 to text-muted-foreground */}
                 Discover the versatility and luxury of cream in all its forms.
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="text-lg leading-relaxed text-gray-700">
+              <p className="text-lg leading-relaxed text-foreground"> {/* Changed text-gray-700 to text-foreground */}
                 Cream, a dairy product composed of the higher-fat layer skimmed from the top of milk before homogenization, is a staple in kitchens worldwide. From enriching savory dishes to perfecting sweet desserts, its velvety texture and rich flavor are simply unparalleled. We celebrate the simple elegance and profound impact of cream in culinary arts.
               </p>
-              <p className="mt-4 text-lg leading-relaxed text-gray-700">
+              <p className="mt-4 text-lg leading-relaxed text-foreground"> {/* Changed text-gray-700 to text-foreground */}
                 Whether it's whipped into a cloud-like topping, churned into butter, or simmered into a decadent sauce, cream adds a touch of magic to every recipe. We invite you to explore the beauty and deliciousness of cream through our curated collection of images.
               </p>
             </CardContent>
@@ -222,12 +221,12 @@ const CreamPage: React.FC = () => {
         </section>
 
         <section className="mb-12">
-          <h2 className="text-4xl font-bold text-center text-rose-800 mb-8">Gallery of Clear Wonders Product</h2>
+          <h2 className="text-4xl font-bold text-center text-foreground mb-8">Gallery of Clear Wonders Product</h2> {/* Changed text-rose-800 to text-foreground */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {galleryImages.map((image, index) => (
               <Card
                 key={index}
-                className="overflow-hidden shadow-md border-rose-100 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg group"
+                className="overflow-hidden shadow-md border cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg group" {/* Changed border-rose-100 to border */}
                 onClick={() => handleImageClick(image)}
               >
                 <img
@@ -236,13 +235,13 @@ const CreamPage: React.FC = () => {
                   className="w-full h-48 object-cover object-center transition-transform duration-300 group-hover:scale-105"
                 />
                 <CardContent className="p-4">
-                  <p className="text-md font-semibold text-rose-700">{image.alt}</p>
-                  <p className="text-sm text-gray-600">A delightful capture.</p>
+                  <p className="text-md font-semibold text-foreground">{image.alt}</p> {/* Changed text-rose-700 to text-foreground */}
+                  <p className="text-sm text-muted-foreground">A delightful capture.</p> {/* Changed text-gray-600 to text-muted-foreground */}
                 </CardContent>
               </Card>
             ))}
             <div className="col-span-full flex items-center justify-center p-8">
-              <p className="text-2xl font-bold text-rose-800 italic">... and so much more!</p>
+              <p className="text-2xl font-bold text-foreground italic">... and so much more!</p> {/* Changed text-rose-800 to text-foreground */}
             </div>
           </div>
         </section>
