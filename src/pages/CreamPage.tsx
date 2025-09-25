@@ -130,7 +130,7 @@ const CreamPage: React.FC = () => {
     .filter(image => !imagesToRemove.includes(image.src))
     .map(image => ({
       ...image,
-      alt: `Clear Wonders Cream product ${currentProductNumber++}`
+      alt: `Clear Wonders product No ${currentProductNumber++}` // Changed this line
     }));
 
   const handleImageClick = (image: GalleryImage) => {
