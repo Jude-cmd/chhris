@@ -3,6 +3,7 @@
 import React from "react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import SidebarActionButton from "@/components/SidebarActionButton"; // Import the new button component
 
 interface AboutFounderSidebarProps {
   isOpen: boolean;
@@ -37,6 +38,7 @@ const AboutFounderSidebar: React.FC<AboutFounderSidebarProps> = ({ isOpen, onClo
             — With love and care, Aisha Musa
           </p>
         </div>
+        <SidebarActionButton label="Learn More" onClick={onClose} /> {/* Added the moving button */}
       </SheetContent>
     </Sheet>
   );

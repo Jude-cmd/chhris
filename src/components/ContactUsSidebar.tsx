@@ -2,7 +2,8 @@
 
 import React from "react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet";
-import { Mail, Phone, MapPin } from "lucide-react"; // Importing icons
+import { Mail, Phone, MapPin } from "lucide-react";
+import SidebarActionButton from "@/components/SidebarActionButton"; // Import the new button component
 
 interface ContactUsSidebarProps {
   isOpen: boolean;
@@ -40,6 +41,7 @@ const ContactUsSidebar: React.FC<ContactUsSidebarProps> = ({ isOpen, onClose }) 
             Our customer service team is available Monday to Saturday, 9 AM - 6 PM.
           </p>
         </div>
+        <SidebarActionButton label="Get in Touch" onClick={onClose} /> {/* Added the moving button */}
       </SheetContent>
     </Sheet>
   );
