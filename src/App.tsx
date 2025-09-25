@@ -7,16 +7,19 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CreamPage from "./pages/CreamPage";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import Navbar from "@/components/Navbar"; // Import Navbar
-import AboutFounderSidebar from "@/components/AboutFounderSidebar"; // Import AboutFounderSidebar
-import ContactUsSidebar from "@/components/ContactUsSidebar"; // Import ContactUsSidebar
-import React, { useState } from "react"; // Import useState
+import Navbar from "@/components/Navbar";
+import AboutFounderSidebar from "@/components/AboutFounderSidebar";
+import ContactUsSidebar from "@/components/ContactUsSidebar";
+import React, { useState } from "react";
 
 const queryClient = new QueryClient();
 
 const App = () => {
   const [isAboutSidebarOpen, setIsAboutSidebarOpen] = useState(false);
   const [isContactSidebarOpen, setIsContactSidebarOpen] = useState(false);
+
+  const handleOpenAbout = () => setIsAboutSidebarOpen(true);
+  const handleOpenContact = () => setIsContactSidebarOpen(true);
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -26,14 +29,22 @@ const App = () => {
           <Sonner />
           <BrowserRouter>
             <Navbar
-              onOpenAbout={() => setIsAboutSidebarOpen(true)}
-              onOpenContact={() => setIsContactSidebarOpen(true)}
+              onOpenAbout={handleOpenAbout}
+              onOpenContact={handleOpenContact}
             />
             <AboutFounderSidebar isOpen={isAboutSidebarOpen} onClose={() => setIsAboutSidebarOpen(false)} />
             <ContactUsSidebar isOpen={isContactSidebarOpen} onClose={() => setIsContactSidebarOpen(false)} />
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/cream" element={<CreamPage />} />
+              <Route 
+                path="/cream" 
+                element={
+                  <CreamPage 
+                    onOpenAbout={handleOpenAbout} 
+                    onOpenContact={handleOpenContact} 
+                  />
+                } 
+              />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

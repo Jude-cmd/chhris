@@ -4,22 +4,25 @@ import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-// Removed AboutFounderSidebar and ContactUsSidebar imports as they are now in App.tsx
-import { Menu, MessageSquareText } from "lucide-react"; // Keep Menu and MessageSquareText if used for other purposes, but remove if only for sidebar toggles
+import { Menu, MessageSquareText } from "lucide-react";
 import GalleryImageModal from "@/components/GalleryImageModal";
 import FAQSection from "@/components/FAQSection";
 import MovingFlowers from "@/components/MovingFlowers";
 import ScrollParallaxElements from "@/components/ScrollParallaxElements";
-// Removed SidebarActionButton import as it's no longer needed here
-// Removed ThemeToggle import as it's now in Navbar
+import SidebarActionButton from "@/components/SidebarActionButton";
+import { ThemeToggle } from "@/components/ThemeToggle"; // Keep ThemeToggle import for the floating button
 
 interface GalleryImage {
   src: string;
   alt: string;
 }
 
-const CreamPage: React.FC = () => {
-  // Removed isAboutSidebarOpen and isContactSidebarOpen states as they are now managed in App.tsx
+interface CreamPageProps {
+  onOpenAbout: () => void;
+  onOpenContact: () => void;
+}
+
+const CreamPage: React.FC<CreamPageProps> = ({ onOpenAbout, onOpenContact }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
 
@@ -141,12 +144,46 @@ const CreamPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen p-4 sm:p-8 relative overflow-hidden pt-14"> {/* Added pt-14 for Navbar clearance */}
+    <div className="min-h-screen p-4 sm:p-8 relative overflow-hidden pt-14">
       <MovingFlowers />
       <ScrollParallaxElements />
       <div className="max-w-4xl mx-auto z-10 relative">
         <header className="text-center mb-12 relative">
-          {/* Removed all sidebar toggle buttons and ThemeToggle as they are now in the Navbar */}
+          {/* Floating mobile sidebar toggle buttons */}
+          <div className="absolute top-4 left-4 flex flex-col space-y-2 md:hidden">
+            <Button
+              variant="outline"
+              size="icon"
+              className="bg-white text-rose-700 border-rose-300 hover:bg-rose-50"
+              onClick={onOpenAbout}
+            >
+              <Menu className="h-5 w-5" />
+              <span className="sr-only">Open About Founder Sidebar</span>
+            </Button>
+          </div>
+          <div className="absolute top-4 right-4 flex flex-col space-y-2 md:hidden">
+            <Button
+              variant="outline"
+              size="icon"
+              className="bg-white text-rose-700 border-rose-300 hover:bg-rose-50"
+              onClick={onOpenContact}
+            >
+              <MessageSquareText className="h-5 w-5" />
+              <span className="sr-only">Open Contact Us Sidebar</span>
+            </Button>
+          </div>
+
+          {/* Floating desktop Sidebar Action Buttons and ThemeToggle */}
+          <div className="absolute top-24 left-4 z-20 hidden md:block">
+            <SidebarActionButton label="About Us" onClick={onOpenAbout} className="w-auto px-4 py-2 text-sm" />
+          </div>
+          <div className="absolute top-24 right-4 z-20 hidden md:block flex flex-col items-end">
+            <SidebarActionButton label="Contact Us" onClick={onOpenContact} className="w-auto px-4 py-2 text-sm" />
+            <div className="mt-2">
+              <ThemeToggle />
+            </div>
+          </div>
+
           <h1 className="text-5xl font-extrabold text-foreground mb-4 tracking-tight">
             The Wonderful World of Clear Wonders Authentic and Beauty Products
           </h1>
@@ -213,7 +250,6 @@ const CreamPage: React.FC = () => {
         <FAQSection />
 
       </div>
-      {/* Removed AboutFounderSidebar and ContactUsSidebar as they are now rendered in App.tsx */}
       {selectedImage && (
         <GalleryImageModal
           isOpen={isModalOpen}
