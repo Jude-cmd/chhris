@@ -11,7 +11,8 @@ import GalleryImageModal from "@/components/GalleryImageModal";
 import FAQSection from "@/components/FAQSection";
 import MovingFlowers from "@/components/MovingFlowers";
 import ScrollParallaxElements from "@/components/ScrollParallaxElements";
-import SidebarActionButton from "@/components/SidebarActionButton"; // Import the SidebarActionButton
+import SidebarActionButton from "@/components/SidebarActionButton";
+import { ThemeToggle } from "@/components/ThemeToggle"; // Import the ThemeToggle
 
 interface GalleryImage {
   src: string;
@@ -169,6 +170,10 @@ const CreamPage: React.FC = () => {
               <MessageSquareText className="h-5 w-5" />
               <span className="sr-only">Open Contact Us Sidebar</span>
             </Button>
+            {/* Theme Toggle on CreamPage, positioned to the left of the contact button */}
+            <div className="absolute -left-12 top-0"> {/* Adjust position as needed */}
+              <ThemeToggle />
+            </div>
           </div>
 
           {/* New external Sidebar Action Buttons */}
