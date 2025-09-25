@@ -11,7 +11,8 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
 import AboutFounderSidebar from "@/components/AboutFounderSidebar";
 import ContactUsSidebar from "@/components/ContactUsSidebar";
-import Footer from "@/components/Footer"; // Import the new Footer component
+import Footer from "@/components/Footer";
+import ScrollToTopButton from "@/components/ScrollToTopButton"; // Import the new ScrollToTopButton
 import React, { useState } from "react";
 
 const queryClient = new QueryClient();
@@ -30,14 +31,14 @@ const App = () => {
           <Toaster />
           <Sonner />
           <BrowserRouter>
-            <div className="flex flex-col min-h-screen"> {/* Added flex container for sticky footer */}
+            <div className="flex flex-col min-h-screen">
               <Navbar
                 onOpenAbout={handleOpenAbout}
                 onOpenContact={handleOpenContact}
               />
               <AboutFounderSidebar isOpen={isAboutSidebarOpen} onClose={() => setIsAboutSidebarOpen(false)} />
               <ContactUsSidebar isOpen={isContactSidebarOpen} onClose={() => setIsContactSidebarOpen(false)} />
-              <main className="flex-grow"> {/* Main content grows to push footer down */}
+              <main className="flex-grow">
                 <Routes>
                   <Route path="/" element={<Index />} />
                   <Route
@@ -57,7 +58,8 @@ const App = () => {
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </main>
-              <Footer /> {/* Add the Footer component here */}
+              <Footer />
+              <ScrollToTopButton /> {/* Add the ScrollToTopButton here */}
             </div>
           </BrowserRouter>
         </TooltipProvider>
