@@ -143,7 +143,8 @@ const CreamPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen p-4 sm:p-8 relative overflow-hidden"> {/* Removed hardcoded background and text colors */}
+    // Removed hardcoded background and text colors
+    <div className="min-h-screen p-4 sm:p-8 relative overflow-hidden">
       <MovingFlowers />
       <ScrollParallaxElements />
       <div className="max-w-4xl mx-auto z-10 relative">
