@@ -18,24 +18,27 @@ const ScrollParallaxElements: React.FC = () => {
   }, []);
 
   // These values determine how much slower the elements move relative to the scroll.
-  // A positive value here means they move UP as you scroll DOWN, creating a parallax effect.
-  const parallaxFactorLeft = 0.2; // Moves 20% of the scroll distance in the opposite direction
-  const parallaxFactorRight = 0.3; // Moves 30% of the scroll distance in the opposite direction
+  // A smaller factor means they move less.
+  // For a classic parallax effect where background elements move slower than foreground:
+  // - An element starting at the top should move DOWN as you scroll DOWN (positive translateY).
+  // - An element starting at the bottom should move UP as you scroll DOWN (negative translateY).
+  const parallaxFactorTopLeft = 0.1; // Top-left flower moves down 10% of scroll distance
+  const parallaxFactorBottomRight = 0.15; // Bottom-right flower moves up 15% of scroll distance
 
   return (
     <>
-      {/* Left side element */}
+      {/* Top-Left Flower: Moves DOWN slowly as user scrolls DOWN */}
       <div
         className="fixed top-1/4 left-4 z-0 opacity-70 hidden md:block pointer-events-none"
-        style={{ transform: `translateY(-${scrollY * parallaxFactorLeft}px)` }} // Changed to negative translateY
+        style={{ transform: `translateY(${scrollY * parallaxFactorTopLeft}px)` }}
       >
         <Flower size={64} className="text-rose-300" />
       </div>
 
-      {/* Right side element */}
+      {/* Bottom-Right Flower: Moves UP slowly as user scrolls DOWN */}
       <div
-        className="fixed top-3/4 right-4 z-0 opacity-70 hidden md:block pointer-events-none"
-        style={{ transform: `translateY(-${scrollY * parallaxFactorRight}px)` }} // Changed to negative translateY
+        className="fixed bottom-1/4 right-4 z-0 opacity-70 hidden md:block pointer-events-none"
+        style={{ transform: `translateY(-${scrollY * parallaxFactorBottomRight}px)` }}
       >
         <Flower size={64} className="text-rose-300" />
       </div>
