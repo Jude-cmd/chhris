@@ -6,13 +6,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CreamPage from "./pages/CreamPage";
-import { ThemeProvider } from "@/components/ThemeProvider"; // Import ThemeProvider
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme"> {/* Wrap with ThemeProvider */}
+    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme" enableSystem attribute="class"> {/* Added enableSystem and attribute="class" */}
       <TooltipProvider>
         <Toaster />
         <Sonner />

@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 import MovingFlowers from "@/components/MovingFlowers";
 import { ArrowRight } from "lucide-react";
 import NewsletterSignup from "@/components/NewsletterSignup";
-import { ThemeToggle } from "@/components/ThemeToggle"; // Import the new component
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-4 relative overflow-hidden">
-      <div className="absolute top-4 right-4 z-20"> {/* Position the toggle button */}
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden"> {/* Removed bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 */}
+      <div className="absolute top-4 right-4 z-20">
         <ThemeToggle />
       </div>
       <MovingFlowers />
