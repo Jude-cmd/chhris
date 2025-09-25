@@ -19,20 +19,20 @@ const Index = () => {
         <p className="text-xl italic font-normal text-gray-700 dark:text-gray-300 mb-8">
           "Where beauty begins with the skin"
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"> {/* Added mb-8 for spacing */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <Link to="/cream">
             <Button className="px-6 py-3 text-lg bg-rose-500 hover:bg-rose-600 text-white animate-float">
               Click Here
             </Button>
           </Link>
-          <ArrowRight className="h-6 w-6 text-rose-600 animate-pulse" /> {/* Arrow icon */}
+          <ArrowRight className="h-6 w-6 text-rose-600 animate-pulse" />
           <Link to="/cream">
             <Button className="px-6 py-3 text-lg bg-rose-600 hover:bg-rose-700 text-white">
               Explore the World of Astonishing products
             </Button>
           </Link>
         </div>
-        <p className="text-lg text-gray-600 dark:text-gray-400 font-medium">Created by Jude</p> {/* Added "Created by Jude" */}
+        <p className="text-sm text-gray-600 dark:text-gray-400 font-medium mt-8">Created by Jude</p> {/* Changed text-lg to text-sm and added mt-8 */}
       </div>
     </div>
   );
