@@ -32,7 +32,7 @@ const ScrollParallaxElements: React.FC = () => {
         className="fixed top-1/4 left-4 z-0 opacity-70 hidden md:block pointer-events-none"
         style={{ transform: `translateY(${scrollY * parallaxFactorTopLeft}px)` }}
       >
-        <Flower size={64} className="text-rose-300" />
+        <Flower size={64} className="text-emerald-400" /> {/* Changed text-rose-300 to text-emerald-400 */}
       </div>
 
       {/* Bottom-Right Flower: Moves UP slowly as user scrolls DOWN */}
@@ -40,7 +40,7 @@ const ScrollParallaxElements: React.FC = () => {
         className="fixed bottom-1/4 right-4 z-0 opacity-70 hidden md:block pointer-events-none"
         style={{ transform: `translateY(-${scrollY * parallaxFactorBottomRight}px)` }}
       >
-        <Flower size={64} className="text-rose-300" />
+        <Flower size={64} className="text-emerald-400" /> {/* Changed text-rose-300 to text-emerald-400 */}
       </div>
     </>
   );

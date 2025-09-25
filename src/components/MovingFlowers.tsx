@@ -4,7 +4,7 @@ import React from 'react';
 import { Flower } from 'lucide-react'; // Importing the Flower icon
 
 const MovingFlowers: React.FC = () => {
-  const flowerClasses = "absolute text-rose-400 opacity-80 animate-float z-0"; // Adjusted classes for icon
+  const flowerClasses = "absolute text-emerald-500 opacity-80 animate-float z-0"; // Changed text-rose-400 to text-emerald-500
 
   return (
     <>
