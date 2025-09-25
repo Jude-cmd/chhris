@@ -143,7 +143,7 @@ const CreamPage: React.FC = () => {
   };
 
   return (
-    // Removed hardcoded background and text colors
+    {/* Removed hardcoded background and text colors */}
     <div className="min-h-screen p-4 sm:p-8 relative overflow-hidden">
       <MovingFlowers />
       <ScrollParallaxElements />
@@ -200,7 +200,7 @@ const CreamPage: React.FC = () => {
         <section className="mb-12">
           <Card className="overflow-hidden shadow-lg border"> {/* Changed border-rose-200 to border */}
             <img
-              src="/WhatsApp Image 2025-09-25 at 00.34.20_436040a4.jpg"
+              src="/WhatsApp Image 20250924-WA0003.jpg"
               alt="Delicious Cream"
               className="w-full h-64 object-cover [object-position:top_20%]"
             />
