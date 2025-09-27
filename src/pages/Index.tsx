@@ -12,6 +12,7 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col items-center p-4 relative overflow-hidden pt-14">
       <MovingFlowers />
+      <HeroSection /> {/* Moved HeroSection back here, before the main div */}
       <div className="text-center z-10 relative">
         {/* Floating elements for visual interest in the welcome section */}
         <Leaf className="absolute -top-8 left-1/4 h-16 w-16 text-muted-foreground opacity-30 animate-float animate-delay-100 hidden sm:block" />
@@ -25,9 +26,10 @@ const Index = () => {
           className="mx-auto mb-8 h-48 w-auto"
         />
         
-        <HeroSection /> {/* Moved HeroSection here, after the logo */}
-
-        {/* Removed the old h1 and p tags as HeroSection now provides the main welcome message */}
+        <h1 className="text-4xl font-bold mb-4">Welcome to Clear Wonders Skin Care</h1> {/* Re-added */}
+        <p className="text-xl italic font-normal text-gray-700 dark:text-gray-300 mb-8"> {/* Re-added */}
+          "Where beauty begins with the skin"
+        </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <Link to="/cream">
