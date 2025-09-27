@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react"; // Import useState
+import React, { useState } from "react"; /
+/ Import useState
 import { useParams, Link } from "react-router-dom";
 import { products } from "@/data/products";
 import { Button } from "@/components/ui/button";
