@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 import MovingFlowers from "@/components/MovingFlowers";
 import { ArrowRight } from "lucide-react";
 import NewsletterSignup from "@/components/NewsletterSignup";
-import FeaturedProductsCarousel from "@/components/FeaturedProductsCarousel"; // Import the new carousel component
-// Removed ThemeToggle import as it's now in Navbar
+import FeaturedProductsCarousel from "@/components/FeaturedProductsCarousel";
+import HeroSection from "@/components/HeroSection"; // Import the new HeroSection
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col items-center p-4 relative overflow-hidden pt-14">
-      {/* Removed ThemeToggle from here */}
       <MovingFlowers />
+      <HeroSection /> {/* Add the HeroSection here */}
       <div className="text-center z-10">
         <img
           src="/clear-wonders-logo.png"
@@ -38,8 +38,8 @@ const Index = () => {
         </div>
         <NewsletterSignup />
       </div>
-      <FeaturedProductsCarousel /> {/* Add the FeaturedProductsCarousel here */}
-      <p className="text-xs text-gray-600 dark:text-gray-400 font-medium mt-8">Created by Jude</p> {/* Moved here */}
+      <FeaturedProductsCarousel />
+      <p className="text-xs text-gray-600 dark:text-gray-400 font-medium mt-8">Created by Jude</p>
     </div>
   );
 };
