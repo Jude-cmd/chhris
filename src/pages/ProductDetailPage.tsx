@@ -5,8 +5,8 @@ import { useParams, Link } from "react-router-dom";
 import { products } from "@/data/products";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import MovingFlowers from "@/components/MovingFlowers"; // Restored import
-import ScrollParallaxElements from "@/components/ScrollParallaxElements"; // Restored import
+// Removed MovingFlowers import
+// Removed ScrollParallaxElements import
 import { ArrowLeft } from "lucide-react";
 import GalleryImageModal from "@/components/GalleryImageModal";
 
@@ -31,8 +31,8 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenContact }) 
   if (!product) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden pt-14">
-        <MovingFlowers /> {/* Restored MovingFlowers component */}
-        <ScrollParallaxElements /> {/* Restored ScrollParallaxElements component */}
+        {/* Removed MovingFlowers component */}
+        {/* Removed ScrollParallaxElements component */}
         <div className="text-center z-10">
           <h1 className="text-4xl font-bold mb-4 text-destructive">Product Not Found</h1>
           <p className="text-xl text-muted-foreground mb-8">
@@ -50,8 +50,8 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenContact }) 
 
   return (
     <div className="min-h-screen p-4 sm:p-8 relative overflow-hidden pt-14">
-      <MovingFlowers /> {/* Restored MovingFlowers component */}
-      <ScrollParallaxElements /> {/* Restored ScrollParallaxElements component */}
+      {/* Removed MovingFlowers component */}
+      {/* Removed ScrollParallaxElements component */}
       <div className="max-w-4xl mx-auto z-10 relative">
         <header className="text-center mb-12 relative">
           <Link to="/cream" className="absolute top-4 left-4">
