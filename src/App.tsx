@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom"; // Added useLocation, useNavigate
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CreamPage from "./pages/CreamPage";
@@ -12,8 +12,8 @@ import Navbar from "@/components/Navbar";
 import AboutFounderSidebar from "@/components/AboutFounderSidebar";
 import ContactUsSidebar from "@/components/ContactUsSidebar";
 import Footer from "@/components/Footer";
-import ScrollToTopButton from "@/components/ScrollToTopButton"; // Import the new ScrollToTopButton
-import React, { useState } from "react";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
+import React, { useState, useEffect } from "react"; // Added useEffect
 
 const queryClient = new QueryClient();
 
@@ -23,6 +23,16 @@ const App = () => {
 
   const handleOpenAbout = () => setIsAboutSidebarOpen(true);
   const handleOpenContact = () => setIsContactSidebarOpen(true);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // Effect to redirect to the home page if the initial load is not '/'
+  useEffect(() => {
+    if (location.pathname !== "/") {
+      navigate("/", { replace: true });
+    }
+  }, [navigate, location.pathname]); // Added location.pathname to dependency array
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -59,7 +69,7 @@ const App = () => {
                 </Routes>
               </main>
               <Footer />
-              <ScrollToTopButton /> {/* Add the ScrollToTopButton here */}
+              <ScrollToTopButton />
             </div>
           </BrowserRouter>
         </TooltipProvider>
