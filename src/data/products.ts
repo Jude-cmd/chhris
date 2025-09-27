@@ -100,34 +100,5 @@ const originalGalleryImages = [
   { src: "/IMG-20250924-WA0094.jpg", alt: "Clear Wonders Cream product 91" },
 ];
 
-// Only include the first 5 products
-const imagesToInclude = originalGalleryImages.slice(0, 5).map(image => image.src);
-
-const descriptiveWords = [
-  "Radiant", "Luminous", "Glowing", "Vibrant", "Nourishing", "Hydrating", "Revitalizing", "Rejuvenating",
-  "Soothing", "Calming", "Gentle", "Pure", "Natural", "Silky", "Smooth", "Supple", "Soft", "Youthful",
-  "Fresh", "Clean", "Exquisite", "Luxurious", "Divine", "Ethereal", "Sublime", "Enchanting", "Captivating",
-  "Alluring", "Graceful", "Elegant", "Harmonious", "Balanced", "Serene", "Tranquil", "Invigorating",
-  "Refreshing", "Uplifting", "Energizing", "Flawless", "Pristine", "Dreamy", "Blissful", "Joyful",
-  "Wonderful", "Amazing", "Astonishing", "Miraculous", "Magical", "Brilliant", "Dazzling", "Shimmering",
-  "Lustrous", "Resplendent", "Replenishing", "Restorative", "Enriching", "Delicate", "Tender", "Ageless",
-  "Timeless", "Opulent", "Polished", "Refined", "Velvety", "Dewy", "Resilient", "Peaceful", "Splendid",
-  "Glorious", "Superb", "Grand", "Magnificent", "Stellar", "Supreme", "Ultimate", "Precious", "Cherished",
-  "Beloved", "Esteemed", "Valued", "Treasured", "Admired", "Revered", "Perfect", "Immaculate", "Happy"
-];
-
-export const products: Product[] = originalGalleryImages
-  .filter(image => imagesToInclude.includes(image.src)) // Filter to only include the first 5
-  .map((image, index) => {
-    const productNumber = index + 1; // Use index + 1 for unique numbering
-    const uniqueWord = descriptiveWords[index % descriptiveWords.length]; // Cycle through words if more products than words
-    const descriptionTemplate = `This ${uniqueWord} Clear Wonders product is designed to bring radiance and nourishment to your skin. It features a unique blend of natural ingredients, carefully selected to provide optimal care and a delightful experience. Discover the magic of Clear Wonders with this amazing item!`;
-
-    return {
-      id: `product-${productNumber}`, // Unique ID for routing
-      src: image.src,
-      alt: `Clear Wonders product No ${productNumber}`,
-      name: `Clear Wonders Product ${productNumber}`, // Now correctly numbered
-      description: descriptionTemplate,
-    };
-  });
+// No images are explicitly included, so the products array will be empty.
+export const products: Product[] = [];

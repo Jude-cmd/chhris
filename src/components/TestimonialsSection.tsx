@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-// Removed Star import
+import { Star } from "lucide-react"; // Restored Star import
 
 interface Testimonial {
   name: string;
@@ -44,12 +44,11 @@ const TestimonialsSection: React.FC = () => {
           <Card key={index} className="shadow-lg border border-rose-200 bg-white/80 backdrop-blur-sm">
             <CardHeader>
               <div className="flex items-center mb-2">
-                {/* Replaced Star icons with text stars */}
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <span key={i} className="text-yellow-400">★</span>
+                  <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
                 ))}
                 {Array.from({ length: 5 - testimonial.rating }).map((_, i) => (
-                  <span key={i + testimonial.rating} className="text-gray-300">☆</span>
+                  <Star key={i + testimonial.rating} className="h-5 w-5 text-gray-300" />
                 ))}
               </div>
               <CardTitle className="text-xl font-semibold text-rose-700">
