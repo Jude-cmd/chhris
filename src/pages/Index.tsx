@@ -12,7 +12,6 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col items-center p-4 relative overflow-hidden pt-14">
       <MovingFlowers />
-      <HeroSection /> {/* Moved HeroSection back here, before the main div */}
       <div className="text-center z-10 relative">
         {/* Floating elements for visual interest in the welcome section */}
         <Leaf className="absolute -top-8 left-1/4 h-16 w-16 text-muted-foreground opacity-30 animate-float animate-delay-100 hidden sm:block" />
@@ -26,8 +25,8 @@ const Index = () => {
           className="mx-auto mb-8 h-48 w-auto"
         />
         
-        <h1 className="text-4xl font-bold mb-4">Welcome to Clear Wonders Skin Care</h1> {/* Re-added */}
-        <p className="text-xl italic font-normal text-gray-700 dark:text-gray-300 mb-8"> {/* Re-added */}
+        <h1 className="text-4xl font-bold mb-4">Welcome to Clear Wonders Skin Care</h1>
+        <p className="text-xl italic font-normal text-gray-700 dark:text-gray-300 mb-8">
           "Where beauty begins with the skin"
         </p>
         
@@ -46,6 +45,7 @@ const Index = () => {
         </div>
         <NewsletterSignup />
       </div>
+      <HeroSection /> {/* Moved HeroSection here, after the entire welcome div */}
       <FeaturedProductsCarousel />
       <p className="text-xs text-gray-600 dark:text-gray-400 font-medium mt-8">Created by Jude</p>
     </div>
