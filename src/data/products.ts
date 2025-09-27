@@ -4,7 +4,6 @@ export interface Product {
   alt: string;
   name: string;
   description: string;
-  // price: string; // Removed price
 }
 
 const originalGalleryImages = [
@@ -109,6 +108,89 @@ const imagesToRemove = [
   "/IMG-20250924-WA0064.jpg", // product 61
   "/IMG-20250924-WA0085.jpg", // product 82 (was 85)
   "/IMG-20250924-WA0083.jpg", // product 80 (was 83)
+  // Additional images to remove to reduce repository size
+  "/IMG-20250924-WA0003.jpg",
+  "/IMG-20250924-WA0005.jpg",
+  "/IMG-20250924-WA0006.jpg",
+  "/IMG-20250924-WA0007.jpg",
+  "/IMG-20250924-WA0008.jpg",
+  "/IMG-20250924-WA0009.jpg",
+  "/IMG-20250924-WA0010.jpg",
+  "/IMG-20250924-WA0011.jpg",
+  "/IMG-20250924-WA0012.jpg",
+  "/IMG-20250924-WA0013.jpg",
+  "/IMG-20250924-WA0014.jpg",
+  "/IMG-20250924-WA0015.jpg",
+  "/IMG-20250924-WA0016.jpg",
+  "/IMG-20250924-WA0017.jpg",
+  "/IMG-20250924-WA0018.jpg",
+  "/IMG-20250924-WA0019.jpg",
+  "/IMG-20250924-WA0020.jpg",
+  "/IMG-20250924-WA0021.jpg",
+  "/IMG-20250924-WA0022.jpg",
+  "/IMG-20250924-WA0023.jpg",
+  "/IMG-20250924-WA0024.jpg",
+  "/IMG-20250924-WA0025.jpg",
+  "/IMG-20250924-WA0026.jpg",
+  "/IMG-20250924-WA0027.jpg",
+  "/IMG-20250924-WA0028.jpg",
+  "/IMG-20250924-WA0029.jpg",
+  "/IMG-20250924-WA0030.jpg",
+  "/IMG-20250924-WA0031.jpg",
+  "/IMG-20250924-WA0032.jpg",
+  "/IMG-20250924-WA0033.jpg",
+  "/IMG-20250924-WA0034.jpg",
+  "/IMG-20250924-WA0035.jpg",
+  "/IMG-20250924-WA0036.jpg",
+  "/IMG-20250924-WA0037.jpg",
+  "/IMG-20250924-WA0038.jpg",
+  "/IMG-20250924-WA0039.jpg",
+  "/IMG-20250924-WA0040.jpg",
+  "/IMG-20250924-WA0041.jpg",
+  "/IMG-20250924-WA0042.jpg",
+  "/IMG-20250924-WA0043.jpg",
+  "/IMG-20250924-WA0044.jpg",
+  "/IMG-20250924-WA0045.jpg",
+  "/IMG-20250924-WA0046.jpg",
+  "/IMG-20250924-WA0047.jpg",
+  "/IMG-20250924-WA0049.jpg",
+  "/IMG-20250924-WA0050.jpg",
+  "/IMG-20250924-WA0052.jpg",
+  "/IMG-20250924-WA0054.jpg",
+  "/IMG-20250924-WA0055.jpg",
+  "/IMG-20250924-WA0056.jpg",
+  "/IMG-20250924-WA0059.jpg",
+  "/IMG-20250924-WA0060.jpg",
+  "/IMG-20250924-WA0062.jpg",
+  "/IMG-20250924-WA0063.jpg",
+  "/IMG-20250924-WA0065.jpg",
+  "/IMG-20250924-WA0066.jpg",
+  "/IMG-20250924-WA0067.jpg",
+  "/IMG-20250924-WA0068.jpg",
+  "/IMG-20250924-WA0069.jpg",
+  "/IMG-20250924-WA0070.jpg",
+  "/IMG-20250924-WA0071.jpg",
+  "/IMG-20250924-WA0072.jpg",
+  "/IMG-20250924-WA0073.jpg",
+  "/IMG-20250924-WA0074.jpg",
+  "/IMG-20250924-WA0075.jpg",
+  "/IMG-20250924-WA0076.jpg",
+  "/IMG-20250924-WA0077.jpg",
+  "/IMG-20250924-WA0078.jpg",
+  "/IMG-20250924-WA0079.jpg",
+  "/IMG-20250924-WA0080.jpg",
+  "/IMG-20250924-WA0081.jpg",
+  "/IMG-20250924-WA0082.jpg",
+  "/IMG-20250924-WA0084.jpg",
+  "/IMG-20250924-WA0086.jpg",
+  "/IMG-20250924-WA0087.jpg",
+  "/IMG-20250924-WA0088.jpg",
+  "/IMG-20250924-WA0089.jpg",
+  "/IMG-20250924-WA0090.jpg",
+  "/IMG-20250924-WA0091.jpg",
+  "/IMG-20250924-WA0092.jpg",
+  "/IMG-20250924-WA0093.jpg",
+  "/IMG-20250924-WA0094.jpg",
 ];
 
 const descriptiveWords = [
@@ -137,6 +219,5 @@ export const products: Product[] = originalGalleryImages
       alt: `Clear Wonders product No ${productNumber}`,
       name: `Clear Wonders Product ${productNumber}`, // Now correctly numbered
       description: descriptionTemplate,
-      // price: `$${(25.00 + productNumber * 0.5).toFixed(2)}`, // Removed price
     };
   });
