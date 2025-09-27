@@ -2,8 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import MovingFlowers from "@/components/MovingFlowers";
-import { ArrowRight, Sparkles, Leaf } from "lucide-react";
+import { ArrowRight } from "lucide-react"; // Removed Sparkles, Leaf
 import NewsletterSignup from "@/components/NewsletterSignup";
 import FeaturedProductsCarousel from "@/components/FeaturedProductsCarousel";
 import HeroSection from "@/components/HeroSection";
@@ -11,13 +10,9 @@ import HeroSection from "@/components/HeroSection";
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col items-center p-4 relative overflow-hidden pt-14">
-      <MovingFlowers />
+      {/* Removed MovingFlowers component */}
       <div className="text-center z-10 relative">
-        {/* Floating elements for visual interest in the welcome section */}
-        <Leaf className="absolute -top-8 left-1/4 h-16 w-16 text-muted-foreground opacity-30 animate-float animate-delay-100 hidden sm:block" />
-        <Sparkles className="absolute top-1/3 -right-8 h-12 w-12 text-muted-foreground opacity-30 animate-float animate-delay-200 hidden sm:block" />
-        <Leaf className="absolute bottom-0 -left-12 h-20 w-20 text-muted-foreground opacity-30 animate-float animate-delay-300 hidden sm:block" />
-        <Sparkles className="absolute -bottom-10 right-1/4 h-14 w-14 text-muted-foreground opacity-30 animate-float animate-delay-400 hidden sm:block" />
+        {/* Removed floating elements for visual interest in the welcome section */}
 
         <img
           src="/clear-wonders-logo.png"
@@ -45,7 +40,7 @@ const Index = () => {
         </div>
         <NewsletterSignup />
       </div>
-      <HeroSection /> {/* Moved HeroSection here, after the entire welcome div */}
+      <HeroSection />
       <FeaturedProductsCarousel />
       <p className="text-xs text-gray-600 dark:text-gray-400 font-medium mt-8">Created by Jude</p>
     </div>

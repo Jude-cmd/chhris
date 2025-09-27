@@ -6,13 +6,13 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Menu, MessageSquareText } from "lucide-react";
 import FAQSection from "@/components/FAQSection";
-import MovingFlowers from "@/components/MovingFlowers";
-import ScrollParallaxElements from "@/components/ScrollParallaxElements";
+// Removed MovingFlowers import
+// Removed ScrollParallaxElements import
 import SidebarActionButton from "@/components/SidebarActionButton";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { products } from "@/data/products";
 import TestimonialsSection from "@/components/TestimonialsSection";
-import ReviewForm from "@/components/ReviewForm"; // Import the new ReviewForm
+import ReviewForm from "@/components/ReviewForm";
 
 interface CreamPageProps {
   onOpenAbout: () => void;
@@ -22,8 +22,8 @@ interface CreamPageProps {
 const CreamPage: React.FC<CreamPageProps> = ({ onOpenAbout, onOpenContact }) => {
   return (
     <div className="min-h-screen p-4 sm:p-8 relative overflow-hidden pt-14">
-      <MovingFlowers />
-      <ScrollParallaxElements />
+      {/* Removed MovingFlowers component */}
+      {/* Removed ScrollParallaxElements component */}
       <div className="max-w-4xl mx-auto z-10 relative">
         <header className="text-center mb-12 relative">
           {/* Floating mobile sidebar toggle buttons */}
@@ -124,7 +124,7 @@ const CreamPage: React.FC<CreamPageProps> = ({ onOpenAbout, onOpenContact }) => 
         </section>
 
         <TestimonialsSection />
-        <ReviewForm /> {/* Add the ReviewForm here */}
+        <ReviewForm />
         <FAQSection />
 
       </div>

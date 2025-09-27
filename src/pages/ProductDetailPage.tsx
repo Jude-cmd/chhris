@@ -5,10 +5,10 @@ import { useParams, Link } from "react-router-dom";
 import { products } from "@/data/products";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import MovingFlowers from "@/components/MovingFlowers";
-import ScrollParallaxElements from "@/components/ScrollParallaxElements";
+// Removed MovingFlowers import
+// Removed ScrollParallaxElements import
 import { ArrowLeft } from "lucide-react";
-import GalleryImageModal from "@/components/GalleryImageModal"; // Import GalleryImageModal
+import GalleryImageModal from "@/components/GalleryImageModal";
 
 interface ProductDetailPageProps {
   onOpenContact: () => void;
@@ -31,8 +31,8 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenContact }) 
   if (!product) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden pt-14">
-        <MovingFlowers />
-        <ScrollParallaxElements />
+        {/* Removed MovingFlowers component */}
+        {/* Removed ScrollParallaxElements component */}
         <div className="text-center z-10">
           <h1 className="text-4xl font-bold mb-4 text-destructive">Product Not Found</h1>
           <p className="text-xl text-muted-foreground mb-8">
@@ -50,8 +50,8 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenContact }) 
 
   return (
     <div className="min-h-screen p-4 sm:p-8 relative overflow-hidden pt-14">
-      <MovingFlowers />
-      <ScrollParallaxElements />
+      {/* Removed MovingFlowers component */}
+      {/* Removed ScrollParallaxElements component */}
       <div className="max-w-4xl mx-auto z-10 relative">
         <header className="text-center mb-12 relative">
           <Link to="/cream" className="absolute top-4 left-4">
@@ -73,7 +73,7 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenContact }) 
               src={product.src}
               alt={product.alt}
               className="w-full h-96 object-cover object-center cursor-pointer transition-transform duration-300 hover:scale-105"
-              onClick={() => handleImageClick(product.src, product.alt)} // Add onClick to open modal
+              onClick={() => handleImageClick(product.src, product.alt)}
             />
             <CardHeader>
               <CardTitle className="text-3xl text-foreground">{product.name}</CardTitle>
@@ -96,7 +96,6 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenContact }) 
         </section>
       </div>
 
-      {/* Render the GalleryImageModal */}
       <GalleryImageModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
