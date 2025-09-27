@@ -100,8 +100,8 @@ const originalGalleryImages = [
   { src: "/IMG-20250924-WA0094.jpg", alt: "Clear Wonders Cream product 91" },
 ];
 
-// Only include the first 5 products
-const imagesToInclude = originalGalleryImages.slice(0, 5).map(image => image.src);
+// Only include the first 15 products
+const imagesToInclude = originalGalleryImages.slice(0, 15).map(image => image.src);
 
 const descriptiveWords = [
   "Radiant", "Luminous", "Glowing", "Vibrant", "Nourishing", "Hydrating", "Revitalizing", "Rejuvenating",
@@ -117,7 +117,7 @@ const descriptiveWords = [
 ];
 
 export const products: Product[] = originalGalleryImages
-  .filter(image => imagesToInclude.includes(image.src)) // Filter to only include the first 5
+  .filter(image => imagesToInclude.includes(image.src)) // Filter to only include the first 15
   .map((image, index) => {
     const productNumber = index + 1; // Use index + 1 for unique numbering
     const uniqueWord = descriptiveWords[index % descriptiveWords.length]; // Cycle through words if more products than words

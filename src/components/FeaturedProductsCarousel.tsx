@@ -13,8 +13,8 @@ import { products } from "@/data/products";
 import { Link } from "react-router-dom"; // Restored Link import
 
 const FeaturedProductsCarousel: React.FC = () => {
-  // We'll display a subset of products for the carousel, e.g., the first 6
-  const featuredProducts = products.slice(0, 5); // Displaying only the first 5
+  // We'll display a subset of products for the carousel, e.g., the first 15
+  const featuredProducts = products.slice(0, 15); // Displaying only the first 15
 
   if (featuredProducts.length === 0) {
     return (
