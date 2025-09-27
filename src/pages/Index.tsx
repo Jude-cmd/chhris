@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import MovingFlowers from "@/components/MovingFlowers";
-import { ArrowRight, Sparkles, Leaf } from "lucide-react"; // Import Sparkles and Leaf
+import { ArrowRight, Sparkles, Leaf } from "lucide-react";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import FeaturedProductsCarousel from "@/components/FeaturedProductsCarousel";
 import HeroSection from "@/components/HeroSection";
@@ -12,8 +12,7 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col items-center p-4 relative overflow-hidden pt-14">
       <MovingFlowers />
-      <HeroSection />
-      <div className="text-center z-10 relative"> {/* Added relative positioning for absolute children */}
+      <div className="text-center z-10 relative">
         {/* Floating elements for visual interest in the welcome section */}
         <Leaf className="absolute -top-8 left-1/4 h-16 w-16 text-muted-foreground opacity-30 animate-float animate-delay-100 hidden sm:block" />
         <Sparkles className="absolute top-1/3 -right-8 h-12 w-12 text-muted-foreground opacity-30 animate-float animate-delay-200 hidden sm:block" />
@@ -25,10 +24,11 @@ const Index = () => {
           alt="Clear Wonders Skin Care Logo"
           className="mx-auto mb-8 h-48 w-auto"
         />
-        <h1 className="text-4xl font-bold mb-4">Welcome to Clear Wonders Skin Care</h1>
-        <p className="text-xl italic font-normal text-gray-700 dark:text-gray-300 mb-8">
-          "Where beauty begins with the skin"
-        </p>
+        
+        <HeroSection /> {/* Moved HeroSection here, after the logo */}
+
+        {/* Removed the old h1 and p tags as HeroSection now provides the main welcome message */}
+        
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <Link to="/cream">
             <Button className="px-6 py-3 text-lg bg-rose-500 hover:bg-rose-600 text-white animate-float">

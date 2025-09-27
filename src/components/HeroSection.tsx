@@ -7,7 +7,7 @@ import { Sparkles, Leaf } from "lucide-react"; // Added Leaf icon
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative w-full py-20 md:py-32 lg:py-48 bg-background text-center overflow-hidden rounded-xl shadow-2xl mb-12">
+    <section className="relative w-full py-20 md:py-32 lg:py-48 bg-background text-center overflow-hidden rounded-xl shadow-2xl mb-8"> {/* Changed mb-12 to mb-8 */}
       {/* Background elements for visual interest */}
       <div className="absolute inset-0 z-0 opacity-30">
         <Leaf className="absolute top-1/4 left-1/4 h-24 w-24 text-muted-foreground animate-float animate-delay-100" />
