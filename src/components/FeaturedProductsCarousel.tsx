@@ -16,6 +16,19 @@ const FeaturedProductsCarousel: React.FC = () => {
   // We'll display a subset of products for the carousel, e.g., the first 6
   const featuredProducts = products.slice(0, 6);
 
+  if (featuredProducts.length === 0) {
+    return (
+      <section className="w-full max-w-4xl mx-auto my-12 z-10 text-center">
+        <h2 className="text-4xl font-bold text-center text-foreground mb-4">
+          Our Featured Products
+        </h2>
+        <p className="text-lg text-center text-muted-foreground mb-8">
+          No products available at the moment. Please check back later!
+        </p>
+      </section>
+    );
+  }
+
   return (
     <section className="w-full max-w-4xl mx-auto my-12 z-10">
       <h2 className="text-4xl font-bold text-center text-foreground mb-4">

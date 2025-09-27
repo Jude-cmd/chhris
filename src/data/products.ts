@@ -100,8 +100,7 @@ const originalGalleryImages = [
   { src: "/IMG-20250924-WA0094.jpg", alt: "Clear Wonders Cream product 91" },
 ];
 
-// No images are explicitly removed, so all original images will be included.
-const imagesToRemove: string[] = [];
+const imagesToRemove: string[] = originalGalleryImages.map(image => image.src); // Mark all images for removal
 
 const descriptiveWords = [
   "Radiant", "Luminous", "Glowing", "Vibrant", "Nourishing", "Hydrating", "Revitalizing", "Rejuvenating",
