@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Menu, MessageSquareText } from "lucide-react";
 import FAQSection from "@/components/FAQSection";
-// Removed MovingFlowers import
-// Removed ScrollParallaxElements import
+import MovingFlowers from "@/components/MovingFlowers"; // Restored import
+import ScrollParallaxElements from "@/components/ScrollParallaxElements"; // Restored import
 import SidebarActionButton from "@/components/SidebarActionButton";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { products } from "@/data/products";
@@ -22,8 +22,8 @@ interface CreamPageProps {
 const CreamPage: React.FC<CreamPageProps> = ({ onOpenAbout, onOpenContact }) => {
   return (
     <div className="min-h-screen p-4 sm:p-8 relative overflow-hidden pt-14">
-      {/* Removed MovingFlowers component */}
-      {/* Removed ScrollParallaxElements component */}
+      <MovingFlowers /> {/* Restored MovingFlowers component */}
+      <ScrollParallaxElements /> {/* Restored ScrollParallaxElements component */}
       <div className="max-w-4xl mx-auto z-10 relative">
         <header className="text-center mb-12 relative">
           {/* Floating mobile sidebar toggle buttons */}

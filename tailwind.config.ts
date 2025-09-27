@@ -90,17 +90,17 @@ export default {
           "50%": { transform: "translateY(-10px) scale(1.05)" },
           "100%": { transform: "translateY(0px) scale(1)" },
         },
-        // "dragon-fly": { // Removed dragon-fly keyframes
-        //   "0%": { transform: "scale(0)" },
-        //   "50%": { transform: "scale(1.5)" },
-        //   "100%": { transform: "scale(0)" },
-        // },
+        "dragon-fly": {
+          "0%": { transform: "scale(0)" },
+          "50%": { transform: "scale(1.5)" },
+          "100%": { transform: "scale(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "float": "float 4s ease-in-out infinite",
-        // "dragon-fly": "dragon-fly 2s ease-in-out forwards", // Removed dragon-fly animation
+        "dragon-fly": "dragon-fly 2s ease-in-out forwards",
       },
     },
   },

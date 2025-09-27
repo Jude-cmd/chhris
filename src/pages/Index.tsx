@@ -2,15 +2,16 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react"; // Removed Sparkles, Leaf
+import { ArrowRight } from "lucide-react";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import FeaturedProductsCarousel from "@/components/FeaturedProductsCarousel";
 import HeroSection from "@/components/HeroSection";
+import MovingFlowers from "@/components/MovingFlowers"; // Restored import
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col items-center p-4 relative overflow-hidden pt-14">
-      {/* Removed MovingFlowers component */}
+      <MovingFlowers /> {/* Restored MovingFlowers component */}
       <div className="text-center z-10 relative">
         {/* Removed floating elements for visual interest in the welcome section */}
 

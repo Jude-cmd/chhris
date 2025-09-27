@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-// Removed Star import
+import { Star } from "lucide-react"; // Restored Star import
 import { toast } from "sonner";
 import { Card } from "@/components/ui/card";
 
@@ -66,15 +66,13 @@ const ReviewForm: React.FC = () => {
             </label>
             <div className="flex space-x-1">
               {[1, 2, 3, 4, 5].map((starValue) => (
-                <span
+                <Star
                   key={starValue}
                   className={`h-7 w-7 text-2xl cursor-pointer transition-colors ${
-                    starValue <= rating ? "text-yellow-400" : "text-gray-300"
+                    starValue <= rating ? "text-yellow-400 fill-yellow-400" : "text-gray-300"
                   }`}
                   onClick={() => setRating(starValue)}
-                >
-                  {starValue <= rating ? "★" : "☆"}
-                </span>
+                />
               ))}
             </div>
           </div>
